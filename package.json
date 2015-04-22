@@ -1,0 +1,17 @@
+{
+  "name": "andela-test",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Brice Nkengsa <brice@andela.co>",
+  "description": "Andela Test",
+  "homepage": "http://test.andela.co",
+  "dependencies": {
+    "express": "^4.9.5"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
