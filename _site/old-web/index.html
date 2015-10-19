@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>The Andela Curriculum - Web Development</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/inconsolata.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/highlight.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/toc.css">
+
+    <!-- [if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.toc.js"></script>
+
+    <meta property="og:title" content="Andela Bootcamp" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="http://bootcamp.andela.com" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="Andela Bootcamp" />
+    <meta property="fb:admins" content="8600468" />
+  </head>
+  <body data-spy="scroll" data-target=".sidebar-nav" data-offset="40">
+
+  <div class="fixed sidebar-nav nav hidden-phone">
+    <div class="well">
+      <ul class="nav nav-list sidebar-nav">
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span9" id="content">
+        <div class="row-fluid">
+          <div class="document">
+            <h1>Web Development</h1>
+
+<p>The first version of the training we tried to assemble all of the best resources
+for learning to build simple web applications with Javascript. With our students, we noticed
+that the bootcamp wasn&#39;t preparing them as well as it could have. We were
+missing a big opportunity. Our students expressed that the training went for
+breadth over depth. Rather than honing in on javascript, the meat of our curriculum,
+a lot of time was spent on HTML and CSS which is an important but secondary
+piece.</p>
+
+<p>We strongly believe that learning should have context, and you should know what
+your goals are.  Each section will address which learning objectives it will
+cover, and at the beginning we expect all of you to check out the Javascript
+assesment so you know what you&#39;ll be expected to do at the end of bootcamp.  There&#39;s an
+infinite amount of things you could spend your time learning, part of the value
+of the bootcamp is that we can narrow the scope to only the most essential.  If
+you can achieve fluency in the basic and homestudy topics, we believe you&#39;ll flourish at
+Andela.</p>
+
+<h2>Setup</h2>
+
+<p>To complete these units, you will need a 
+<a href="http://www.codeschool.com/enrollments/dnFtaXFMbXROSVVqT3N1bngwWnBRUjhGc2k1Z1dEOW52cFJvZEMzRUZvRT0tLWpvUElMODBvdFhiZlA4MjE2Mlc2c1E9PQ==">CodeSchool</a>
+account. You also will need a
+<a href="http://codeacademy.com/">CodeAcademy</a> account which is free.</p>
+
+<p>You should also have a NodeJS Development environment setup. There are lots of
+guides for that on the internet and depending on your OS and setup, it&#39;s a bit
+of a process. You could always use <a href="http://nodejs.org/download/">Download Node</a>.</p>
+
+<p>Note to students accepted into the Andela. We will provide you with an
+account to treehouse and codeschool, feel free to use your own to get started,
+but we cover those costs for the duration of the fellowship.</p>
+
+<h2>Thoughts</h2>
+
+<p>One of the challenges in learning how to code is that you probably don&#39;t even
+know what you&#39;re supposed to learn. When creating this prework, we had 4 goals
+in mind.</p>
+
+<ul>
+<li><strong>Full Stack</strong></li>
+</ul>
+
+<p>We&#39;ll present the full stack of technologies required to build a webapp from
+  the ground up. We don&#39;t care if you use Jade or Markdown. The web is built on HTML
+  and everyone should learn it. Whether NoSQL or SQL, understanding the
+  fundamentals of schema design and SQL is crucial. Students shouldn&#39;t shy away
+  from depth. How can you be a web developer without a proficiency in these
+  skills?</p>
+
+<ul>
+<li><strong>Linear Progression</strong></li>
+</ul>
+
+<p>The material is presented in order, going from web basics and computer
+  basics, to markup, to styling, to version control, to programming, and then
+  to databases and web frameworks. You learn the basics of code through Javascript
+  and then finally move to NodeJS that builds upon the rest. Thus you start at
+  the lowest level, the literal HTML the browser renders, and progress up
+  through levels of abstraction until you finally get to the kitchen sink that
+  is the MEAN Stack. As a beginner, don&#39;t try to learn Node without
+  knowing basic HTML/CSS and Javascript. It&#39;s a disservice to your education.</p>
+
+<ul>
+<li><strong>Curated Resources</strong></li>
+</ul>
+
+<p>There is such a plethora of amazing content on learning to code. We liked the
+  consistency of going to a few sources that all shared common interfaces and
+  learning patterns, like videos and interactive portions. So this isn&#39;t a
+  complete list of all the resources, but more a curated list of what we think
+  works well together (with lots of feedback from current fellows). We would love it if
+  you submitted a github issue with more materials you&#39;ve enjoyed.</p>
+
+<ul>
+<li><strong>Language Agnosticism</strong></li>
+</ul>
+
+<p>In the end, programming is about abstractions and expressions. The mechanics
+  of code are universal and exist in all modern languages, like python, ruby,
+  and javascript. We teach Javascript because we love it. Thinking your language
+  choice, especially as a beginner, matters, is like thinking that you can only
+  write poetry in English and not in Spanish. Obviously the beauty of poetry is
+  in rhyme and meter, in metaphor and simile, in cadence and rhythm, not in the
+  king&#39;s English. Why should code be any different? At Andela, you&#39;re
+  learning how to think, how to break problems down, how to express yourself,
+  how to abstract ideas, and how to work together. We just learn that through
+  Javascript  ¯\_(ツ)_/¯.</p>
+
+<h2>Learning Objectives</h2>
+
+<p>The goal of this tutorial is to be able to do the following:</p>
+
+<ol>
+<li>Be comfortable navigating your development environment</li>
+<li>Understand where programming skills fit into the &quot;web&quot;</li>
+<li>Understand what pieces make up a web application</li>
+<li>Develop a level of comfort with the most common ruby patterns in web development</li>
+<li>Understand the basics of version control and why it is used</li>
+<li>Have a basic understanding of HTML including forms</li>
+<li>Through Rails you should learn the following:
+
+<ul>
+<li>RESTful interfaces</li>
+<li>HTTP</li>
+<li>Routing</li>
+<li>Where ruby fits in the web development stack</li>
+</ul></li>
+<li>Develop a comfort with basic SQL queries</li>
+<li>Have a basic understanding of an ORM, ActiveRecord</li>
+<li>Develop a basic knowledge of HTML and CSS</li>
+</ol>
+
+<h1>The Basics</h1>
+
+<h2>Term Definitions</h2>
+
+<p>Thanks to the amazing team at Skillcrush, lots of <a href="http://skillcrush.com/terms/">tech
+terms</a> are artfully explained. These are the ones
+you 100% need to know.</p>
+
+<dl>
+<dd><a href="http://skillcrush.com/2012/05/14/domain/" target="_blank">Domain</a></dd>
+  <dt><p>Ever wonder what that thing in the top of the browser is?</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/06/06/pop-and-imap/" target="_blank">POP & IMAP</a></dd>
+  <dt><p>POP, IMAP, SMTP Oh My! It's only email, don't be scared.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/04/16/api/" target="_blank">API</a></dd>
+  <dt><p>We're building programs that can talk to other programs. Their APIs are their languages. Sort of.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/06/04/wysiwyg/" target="_blank">WYSIWYG</a></dd>
+  <dt><p>You can't always get what you want, but sometimes, What You See Is What You Get.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/04/10/ip-address/" target="_blank">IP Address</a></dd>
+  <dt><p>There's no place like 127.0.0.1, there's no place like 0.0.0.0, there's no place like localhost.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/07/03/web-server-2/" target="_blank">Web Server</a></dd>
+  <dt><p>Apache, Puma, Unicorn, Thin, IIS, Mongrel, don't be scared, they are just the beasts behind the world wide web.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/09/26/bugs-2/" target="_blank">Bugs</a></dd>
+  <dt><p>The term 'debugging' was coined by <a href="http://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a> when she literally removed a moth from her computer to get it working.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/09/19/dns-domain-name-server/" target="_blank">DNS</a></dd>
+  <dt><p>Finally understand how <code><a href="http://74.125.228.4">74.125.228.4</a></code> actually means google.com</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/09/28/the-cloud-2/" target="_blank">The Cloud</a></dd>
+  <dt><p>It's like instead of your head being in the clouds, it's all your infrastructure.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/12/03/command-line-2/" target="_blank">Command Line</a></dd>
+  <dt><p>Live deep in the nix heartland and become a loving extension of the shell.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2013/02/11/version-control/ target="_blank"" target="_blank">Version Control</a></dd>
+  <dt><p>Rule 1. Never lose code. Rule 2. Never lose code.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/10/11/grid-systems/" target="_blank">Grid Systems</a></dd>
+  <dt><p>Just because we're not designers doesn't mean we shouldn't appreciate and respect their grids.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/18/rails/" target="_blank">Rails</a></dd>
+  <dt><p>Not liking Ruby on Rails is like not liking parfait.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/16/cookies/" target="_blank">Cookies</a></dd>
+  <dt><p>There's probably a pun we could come up with, but we take security seriously.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/11/404-error/" target="_blank">404 Error</a></dd>
+  <dt><p>The web's <a href="http://fruit.gs/404.html">best</a> <a href="https://github.com/404">easter</a> <a href="http://seatgeek.com/404">egg</a>.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/08/responsive-design/" target="_blank">Responsive Design</a></dd>
+  <dt><p>Keep your mind like water, but your design should be fluid and screen independent.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/10/seo/" target="_blank">SEO</a></dd>
+  <dt><p>Despite what you might read, it's basically just black magic, the dark arts, the voodoo that gives traffic.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/07/hexadecimal/" target="_blank">Hex</a></dd>
+  <dt><p>Because green to you might not be green to me. So there's these really specific codes we use for colors.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/04/ruby/" target="_blank">Ruby</a></dd>
+  <dt><p>The. Best. Programming. Language. Ever. Period. We. Promise.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/01/cms/" target="_blank">CMS</a></dd>
+  <dt><p>All applications are basically just content management systems anyway.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/05/02/pseudocode/" target="_blank">Pseudo Code</a></dd>
+  <dt><p>First learn to express yourself. Then learn to code.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/04/27/https/" target="_blank">HTTPS</a></dd>
+  <dt><p>Insecure content warnings? HTTP Sniffing? Here's why.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/04/26/open-source/" target="_blank">Open Source</a></dd>
+  <dt><p>It's sort of impossible for me to quantify the impact open source software has made, but at <a href="http://trends.builtwith.com/Web-Server/Apache">least 64%</a> of the top million websites are powered by it.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/09/11/ajax-2/" target="_blank">AJAX</a></dd>
+  <dt><p>And <a href="http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications">one day in February 2005</a>, the Internet suddenly felt different.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/08/13/frontend-vs-backend-2/" target="_blank">Frontend / Backend</a></dd>
+  <dt><p>What's the difference? Turns out, less and less.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/04/05/javascript/" target="_blank">Javascript</a></dd>
+  <dt><p>The most pervasive and ubiquitous programming language since Flash.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/11/15/programming-languages-2/" target="_blank">Programming</a></dd>
+  <dt><p>It's awesome.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/10/21/databases-2/" target="_blank">Database</a></dd>
+  <dt><p>Just think Excel spreadsheet on crack. Better. We mean better.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/04/03/css/" target="_blank">CSS</a></dd>
+  <dt><p>We could never love anyone that didn't appreciate the importance of a separation of content and style.</p></dt>
+
+  <dd><a href="http://skillcrush.com/2012/06/24/html-2/" target="_blank">HTML</a></dd>
+  <dt><p>All documents should come in this format.</p></dt>
+  </dl>
+
+<h2 class="clear"></h2>
+
+<h2>The Command Line</h2>
+
+<p><em>Min 2hr Max 6hr</em></p>
+
+<p>The command line is your home base. It&#39;s probably one of the most important
+differences between a consumer of a computer, and a user. Many developers have
+all sorts of crazy short cut keys set up so that they can use their computer
+solely from the command line without ever having to reach for the mouse. It&#39;s
+vitaly important that you start thinking like a developer, rather than a
+consumer. Getting comfortable with the command line is the first step. If you
+feel like you&#39;re spending too much time on this section, and you&#39;ve
+accomplished the learning objectives, move on.</p>
+
+<h3>Learning Objectives</h3>
+
+<ol>
+<li>Navigate a file structure</li>
+<li>Use your terminal to type commands</li>
+<li>Make files and directories from the command line</li>
+<li>Open files from the command line</li>
+</ol>
+
+<h3>Tasks</h3>
+
+<h3><a href="http://bit.ly/command-line-tutorial" title="Command Line Tutorial Link">Command Line Tutorial</a></h3>
+
+<p><a href="http://bit.ly/command-line-tutorial" title="Command Line Tutorial Link">http://bit.ly/command-line-tutorial</a></p>
+
+<p>A short tutorial on some bash basics written by the wonderful team at Flatiron</p>
+
+<h3><a href="http://teamtreehouse.com/library/console-foundations-2#getting-started-with-the-console" title="Getting Started With the Console Link">Getting Started with the Console</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/console-foundations-2#getting-started-with-the-console" title="Getting Started With the Console Link">http://teamtreehouse.com/library/console-foundations-2#getting-started-with-the-console</a></p>
+
+<h3><a href="http://teamtreehouse.com/library/programming/console-foundations/environment-and-redirection" title="Environment and Redirection Link">Environment and Redirection</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/programming/console-foundations/environment-and-redirection" title="Environment and Redirection Link">http://teamtreehouse.com/library/programming/console-foundations/environment-and-redirection</a></p>
+
+<p><a href="http://teamtreehouse.com/library/console-foundations-2" title="Console Foundation Treehouse Link">Console Foundations</a> is a great video series by Treehouse that
+covers lots of Bash Stuff. Some of it is more advanced, so we only included a
+few sections we feel are crucial. But feel free to skip around. The stuff about
+Environment Variables and PATHS is important. But it&#39;s short and worth going
+through at least once.</p>
+
+<p><br /></p>
+
+<h3>Some Bonus Material</h3>
+
+<p>The following are great resources, they just are a bit advanced and longer. We
+highly recommend you putting in the time to read and go through these examples,
+but don&#39;t worry if they are confusing. Do your best, always.</p>
+
+<h3><a href="http://cli.learncodethehardway.org/book/" title="Learn the Command Line the Hard Way Link">Learn the Command Line the Hard Way</a></h3>
+
+<p><a href="http://cli.learncodethehardway.org/book/" title="Learn the Command Line the Hard Way Link">http://cli.learncodethehardway.org/book/</a></p>
+
+<p>The venerable <a href="http://programming-motherfucker.com/" title="Programming
+Motherfucker">Zed Shaw</a> gives us a short book about your shell. Not the easiest or best
+resource, but it&#39;s still pretty good.</p>
+
+<h3><a href="http://blog.teamtreehouse.com/command-line-basics" title="Command Line Basics">Command Line Basics</a></h3>
+
+<p><a href="http://blog.teamtreehouse.com/command-line-basics" title="Command Line Basics Link">http://blog.teamtreehouse.com/command-line-basics</a></p>
+
+<h2>HTML &amp; CSS</h2>
+
+<p><em>Min 15hr Max 20hr</em></p>
+
+<p>The source of all content on the web, HTML is a crucial markup syntax to understand. We will be covering very little HTML through the course and we seriously expect you to know what the basic tags are and when to use them.</p>
+
+<h3>Learning Objectives</h3>
+
+<ol>
+<li>HTML Fundamentals</li>
+<li>HTML Text Formatting</li>
+<li>HTML Tables, Forms, and Iframes</li>
+<li>HTML5 Elements</li>
+<li>CSS Fundamentals</li>
+<li>CSS Selector Statements</li>
+<li>Building Page Layouts</li>
+<li>Positioning</li>
+<li>Rollover Image Sprites</li>
+<li>Responsive Layouts</li>
+</ol>
+
+<h3><a href="http://skl.sh/1eGffo1" title="Link to Building a HTML and CSS Website From Scratch">Building a HTML and CSS Website From Scratch</a></h3>
+
+<p><a href="http://skl.sh/1eGffo1" title="Link to Building an HTML and CSS Website From Scratch">http://www.skillshare.com/Build-a-HTML-and-CSS-Website-From-Scratch/1216366887</a></p>
+
+<p>Now it is time to investigate building a website from scratch. One of our
+instructors, Jon Grover, has an excellent SkillShare class that will take you
+step-by-step through building a responsive static website.</p>
+
+<p><br /></p>
+
+<h3>Some Bonus Material</h3>
+
+<h3><a href="http://teamtreehouse.com/library/websites/javascript-foundations" title="Javascript Foundations Link">Javascript Foundations</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/javascript-foundations" title="Javascript Foundations Links">http://teamtreehouse.com/library/websites/javascript-foundations</a></p>
+
+<p>This is a beautiful guide that we recommend everyone read through as quickly as
+possible. Don&#39;t worry if you don&#39;t fully understand this, the Treehouse unit
+below covers all this through videos and tests.</p>
+
+<h3><a href="http://teamtreehouse.com/library/websites/html" title="Treehouse HTML Basics">Treehouse HTML Basics</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/html" title="Treehouse HTML Basics">http://teamtreehouse.com/library/websites/html</a></p>
+
+<p>This HTML tutorial helps you master HTML. Mastering HTML and its many elements
+is critical for any type of web professional. HTML or &quot;Hyper Text Markup
+Language&quot; describes the basic structure and content of a web page.</p>
+
+<h3><a href="https://www.codeschool.com/courses/front-end-formations" title="Front-End Formations Link">Front-End Formations</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/front-end-formations">https://www.codeschool.com/courses/front-end-formations</a></p>
+
+<p>If you are familiar with HTML &amp; CSS already and were able to complete the
+Treehouse unit pretty easily, we recommend you try this unit. Especially if you
+are into aesthetics and advanced behaviors as it covers some amazing features
+of HTML &amp; CSS.</p>
+
+<h3><a href="http://teamtreehouse.com/library/websites/css-foundations-2" title="CSS Foundations / CSS3 Link">CSS Foundations / CSS3</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/css-foundations-2">http://teamtreehouse.com/library/websites/css-foundations-2</a></p>
+
+<p>Cascading Style Sheets (CSS) is a language used to describe the visual look of
+a web page. Using CSS, it is possible to change colors, margin, padding, fonts,
+and much more.</p>
+
+<p>CSS3 (Cascading Style Sheets 3) is a superset of CSS that adds many new
+constructs and properties. Support for CSS3 is rapidly improving across all
+major browsers, making it a critical piece of technology for modern web
+professionals.</p>
+
+<h3><a href="http://www.codeschool.com/courses/css-cross-country" title="CSS Cross Country Link">CSS Cross Country</a></h3>
+
+<p><a href="http://www.codeschool.com/courses/css-cross-country">http://www.codeschool.com/courses/css-cross-country</a></p>
+
+<p>A beautiful and interactive tutorial from the amazing people at CodeSchool.</p>
+
+<h3><a href="http://teamtreehouse.com/library/websites/build-a-responsive-website/" title="Responsive Websites Link">Responsive Websites</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/build-a-responsive-website/">http://teamtreehouse.com/library/websites/build-a-responsive-website/</a></p>
+
+<p>The Smells Like Bakin&#39; cupcake company needs their website to work on tablets
+and phones. We will modify the code of their pre-existing website so that it is
+flexible and fits beautifully into a wide variety of screen resolutions and
+devices.</p>
+
+<h2>GIT</h2>
+
+<p><em>Min 1hr Max 4hr</em></p>
+
+<p>Git is a free and open source distributed version control system designed to
+handle everything from small to very large projects with speed and efficiency.</p>
+
+<h3>Learning Objectives</h3>
+
+<ol>
+<li>Have a basic understanding of what version control is</li>
+<li>Understand what git and github are, and how they are different</li>
+<li>Get a working version of Git on your system with your personal identity</li>
+<li>Understand and be able to perfom all basic local Git operations:
+ creating/cloning a repository, making changes, commiting changes, merging/pulling changes and
+ viewing history</li>
+</ol>
+
+<h3><a href="http://www.codeschool.com/courses/try-git" title="Try Git Link">Try Git</a></h3>
+
+<p><a href="http://www.codeschool.com/courses/try-git">http://www.codeschool.com/courses/try-git</a></p>
+
+<p>Get an introduction to the basic concepts of Git version control.</p>
+
+<h4>WAT?</h4>
+
+<p>What is version control?!</p>
+
+<p>Github&#39;s &quot;About Version Control&quot; Version control is a system that records
+changes to a file or set of files over time so that you can recall specific
+versions later. Even though the examples in this book show software source code
+as the files under version control, in reality any type of file on a computer
+can be placed under version control.</p>
+
+<h3><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">Getting Started with Version Control</a></h3>
+
+<p><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">http://git-scm.com/book/en/Getting-Started-About-Version-Control</a></p>
+
+<p>A beginner guide from the Git Source Control Manual</p>
+
+<h4>Enter Git &amp; Github</h4>
+
+<p>Git is a set of tools for local version control. Github is website that hosts
+your code and allows remote version control.</p>
+
+<h3><a href="http://www.jahya.net/blog/?2013-05-git-vs-github">Difference Between Git and Github</a></h3>
+
+<p><a href="http://www.jahya.net/blog/?2013-05-git-vs-github">http://www.jahya.net/blog/?2013-05-git-vs-github</a></p>
+
+<h3><a href="https://help.github.com/articles/set-up-git">Git Basics and Setup</a></h3>
+
+<p><a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a></p>
+
+<p>Now let&#39;s set up your local installation of git so that it knows who you are!</p>
+<div class="highlight"><pre><code class="language-" data-lang="">git config --global user.name "Sandi Metz"
+git config --global user.email sandimetz@example.com
+</code></pre></div>
+<p>Finally, go to <a href="http://github.com/">Github</a> and create an account if you haven&#39;t yet.</p>
+
+<p><br /></p>
+
+<h3>Some Bonus Material</h3>
+
+<h3><a href="http://www.codeschool.com/courses/git-real">Git Real</a></h3>
+
+<p><a href="http://www.codeschool.com/courses/git-real">http://www.codeschool.com/courses/git-real</a></p>
+
+<p>A more advanced introduction to the core of version control with Git.</p>
+
+<h3><a href="http://gitimmersion.com/">Git Immersion</a></h3>
+
+<p><a href="http://gitimmersion.com/">http://gitimmersion.com/</a></p>
+
+<p>Git Immersion is a guided tour that walks through the fundamentals of Git,
+inspired by the premise that to know a thing is to do it.</p>
+
+<h3><a href="http://git-scm.com/book">The Git Book</a></h3>
+
+<p><a href="http://git-scm.com/book">http://git-scm.com/book</a></p>
+
+<p>The entire Pro Git book, written by Scott Chacon and published by Apress, is available here.</p>
+
+<h3><a href="http://git-scm.com/videos">Git Videos</a></h3>
+
+<p><a href="http://git-scm.com/videos">Git Videos</a></p>
+
+<p>Four videos covering some basics from the creators and maintainers of Git.</p>
+
+<h1>Home Study</h1>
+
+<p>The home study program is designed to get to to a solid level of proficiency with HTML and CSS.
+You will also get an opportunity to flex your muscles with JQuery.
+This program is generously provided by our friends at General Assembly.</p>
+
+<h2>Materials</h2>
+
+<p><a href="http://homestudy.andela.co">The HomeStudy Site</a>
+<a href="http://www.codecademy.com/en/tracks/web">Codecademy&#39;s HTML/CSS course</a>
+<a href="http://www.codecademy.com/tracks/javascript">Codecademy&#39;s Javascript course</a></p>
+
+<h1>BootCamp</h1>
+
+<p>The BootCamp is a two-week period where you will get a taste of the Andela fellowship.
+The focus will be getting you to a solid baseline of programming fundamentals using Javascript.</p>
+
+<!-- insert bootcamp exercises here -->
+
+<h2>Javascript</h2>
+
+<p><em>Min 20Hr Max 40Hr</em></p>
+
+<blockquote>
+<p>My conscience won’t let me call Javascript a computer language. That would imply
+that the language works primarily on the computer’s terms. That the language
+is designed to accomodate the computer, first and foremost. That therefore,
+we, the coders, are foreigners, seeking citizenship in the computer’s
+locale. It’s the computer’s language and we are translators for the world.</p>
+
+<p>But what do you call the language when your brain begins to think in that
+language? When you start to use the language’s own words and colloquialisms
+to express yourself. Say, the computer can’t do that. How can it be the
+computer’s language? It is ours, we speak it natively!</p>
+
+<p>We can no longer truthfully call it a computer language. It is coderspeak.
+It is the language of our thoughts.</p>
+
+<p><a href="http://eloquentjavascript.net/">eloquent javascript</a></p>
+</blockquote>
+
+<p>Programming allows you to automate common, repetitive tasks on the computer.
+Developers use programming languages to write software, the software you
+interact with every day. From your alarm clock to your computer; from the web to
+the satellites orbiting our planet, software powers all of it.</p>
+
+<p>Javascript is a programming language that we can use to do any task that needs to be
+run in the browser. Now it can be used to automate anything.
+For example, something that is really irritating is a cluttered
+&quot;Downloads&quot; folder on your Mac. We could write a program that moves a file to a
+new folder, based on it&#39;s file extension, whenever we download something. A
+&quot;scripting-language&quot; would be best suited for this task.</p>
+
+<p>Javascript is one of the most popular languages to create web applications. A web
+framework is a tool that makes developing for the web relatively simple. Some popular web frameworks for Javascript are Express.js and AngularJS. Express is considered as a server side framework as it
+will be run on an actual web server.</p>
+
+<h3>Learning Objectives</h3>
+
+<ol>
+<li>Basic Javascript syntax</li>
+<li>Defining a function/method</li>
+<li>Looping and iteration</li>
+<li>Javascript data structures</li>
+<li>The concept of <code>this</code></li>
+</ol>
+
+<h3><a href="http://www.codecademy.com/tracks/javascript">The CodeAcademy Javascript Track</a></h3>
+
+<p><a href="http://www.codecademy.com/tracks/javascript">http://www.codecademy.com/tracks/javascript</a></p>
+
+<p>We think the CodeAcademy Javascript Track is a comprehensive and engaging way to
+cover the fundementals of the Javascript Langauge. Do it all. The super super
+important parts are:</p>
+
+<ul>
+<li><a href="http://www.codecademy.com/courses/4fa836e5996b00000302064a/resume?curriculum_id=506324b3a7dffd00020bf661">Getting Started</a></li>
+<li><a href="http://www.codecademy.com/courses/4ff5f0db990be7000304059a/resume?curriculum_id=506324b3a7dffd00020bf661">Functions Functions Everwhere</a></li>
+<li><a href="http://www.codecademy.com/courses/50477a9386df1d000203e037/resume?curriculum_id=506324b3a7dffd00020bf661">Control Flow</a></li>
+<li><a href="http://www.codecademy.com/courses/501c71dfe944b1000201f5e2/resume?curriculum_id=506324b3a7dffd00020bf661">Simple game</a></li>
+<li><a href="http://www.codecademy.com/courses/5016dce572e2bb00020002b2/resume?curriculum_id=506324b3a7dffd00020bf661">Loops and Iterators</a></li>
+<li><a href="http://www.codecademy.com/courses/504a39e6bd2cf9000208cd1b/resume?curriculum_id=506324b3a7dffd00020bf661">Data Structures</a></li>
+<li><a href="http://www.codecademy.com/courses/4eecf0726e287400030028c3/resume?curriculum_id=506324b3a7dffd00020bf661">Intro to Objects</a></li>
+</ul>
+
+<p>But again, we highly recommend you do it all, twice possibly.</p>
+
+<h3><a href="http://teamtreehouse.com/library/javascript-basics">Treehouse Javascript Basics</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/javascript-basics">http://teamtreehouse.com/library/javascript-basics</a></p>
+
+<p>The Treehouse Javascript basics is a great beginner resource. It&#39;s a bit slower
+paced, so feel free to move faster if you got through the CodeAcademy unit
+easily.</p>
+
+<h3><a href="https://www.khanacademy.org/computing/computer-programming/programming">Learn to Program with Khan Academy</a></h3>
+
+<p><a href="https://www.khanacademy.org/computing/computer-programming/programming">https://www.khanacademy.org/computing/computer-programming/programming</a></p>
+
+<p>Khan Academy is a free resource specifically designed to replace classroom learning with effective content and applicable challenges</p>
+
+<h3><a href="http://bit.ly/1y4m3c8">Andela JS Assessment</a></h3>
+
+<p><a href="http://bit.ly/1y4m3c8">http://bit.ly/1y4m3c8</a></p>
+
+<p>Our assessment for basic Javascript knowledge. This is the high bar you can shoot for
+in your Ruby understanding. You shouldn&#39;t be able to complete this on your own,
+that&#39;s what we do at the Andela!</p>
+
+<h3>Some Bonus Material</h3>
+
+<h3><a href="http://www.codeavengers.com/javascript/1#1.1">Javascript on Code Avengers</a></h3>
+
+<p><a href="http://www.codeavengers.com/javascript/1#1.1">http://www.codeavengers.com/javascript/1#1.1</a></p>
+
+<p>Learn all the little bits that make Javascript one of the most popular programming
+languages amongst non-programmers and programmers alike.</p>
+
+<h1>Training &amp; Fellowship</h1>
+
+<p>There are many mediums, through which one can deliver applications. You can
+have Desktop Applications, <a href="http://en.wikipedia.org/wiki/Embedded_system">Embedded Applications</a> and Web Applications to name a
+few. At Andela we focus on building Web Applications.</p>
+
+<p>In previous sections you&#39;ve built a static sites using HTML and CSS. You used
+markup languages to tell the browser how to render the content you were
+displaying. In order to have the ability to interact with your users and store
+the information they give you, we&#39;ll need to add more technologies to our
+toolbelt. These technologies are usually referred to as your &quot;Stack.&quot;</p>
+
+<p>A stack usually includes the following:</p>
+
+<ul>
+<li>Operating System: a collection of software that manages computer hardware
+resources and provides common services for computer programs e.g. <a href="http://www.linux.org/">Linux</a></li>
+<li>Web Server: Software that helps deliver web content to a client e.g.
+<a href="http://wiki.nginx.org/Main">nginx</a></li>
+<li>Database: An organized collection of data. <a href="http://www.sqlite.org/">SQLite</a> for example.</li>
+<li>Programming Language, like <a href="http://www.ruby-lang.org/">Ruby</a></li>
+<li>A Web Framework like <a href="http://www.rubyonrails.org/">Ruby on Rails</a></li>
+</ul>
+
+<p>We&#39;ve already covered the basics of your operating system and done a brief
+intro to Ruby. Now we will do a short intro to the language that is used by
+most of the databases used industry-wide, SQL.</p>
+
+<h2>Databases</h2>
+
+<p><em>Min 4hr Max 10hr</em></p>
+
+<p>In order for a web application to be useful it needs to store data, access that
+data and organize the data. This is the job of a database. Typically web apps
+respond to user input and do one of four things, create, read, update, or
+delete data in a database. Javascript serves as a kind of intermediary between the
+user and the database and it can communicate with a database in its native
+language, which for our purposes is MongoDB.</p>
+
+<h3>Learning Objectives</h3>
+
+<ol>
+<li>Understand what a database is used for</li>
+<li>Be able to create, read, update and delete data</li>
+<li>Understand that there are 2 types of DB</li>
+<li>Understand how you can relate two tables in a database (ex. products and categories)</li>
+<li>Be able to write a simple SQL join between two tables</li>
+</ol>
+
+<h3><a href="http://teamtreehouse.com/library/programming/database-foundations">Treehouse SQL Course</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/programming/database-foundations">http://teamtreehouse.com/library/programming/database-foundations</a></p>
+
+<p>The Treehouse SQL course is comprehensive and easy to follow. It uses MySQL,
+which is a powerful database server that we don&#39;t really use at Andela for
+teaching purposes, but learning how to install it and use its GUI isn&#39;t a waste
+of time. So feel free to gloss over the MySQL setup / specific stuff, but it&#39;s
+useful.</p>
+
+<h3><a href="http://try.mongodb.org/">Try MongoDB</a></h3>
+
+<p><a href="http://try.mongodb.org/">http://try.mongodb.org/</a></p>
+
+<p>A self guided tour of the mongoDB shell. It&#39;s
+short and intense, but try to get through the entire thing.</p>
+
+<h2>NodeJS</h2>
+
+<p><em>Min 8hr Max 16hr</em></p>
+
+<p>To build a Node application you&#39;ll need to be able to save and retrieve data
+from a database using SQL or NoSQL, send HTML and CSS back to the browser, navigate your
+computer using the command line, and use git to version control your source
+code. Because Node requires so many skills at once, we don&#39;t want the focus of
+the bootcamp to be Rails, but rather getting introduced to the concepts
+necessary to build modern web applications. Hopefully the first time we talk
+about Node in the classroom, it won&#39;t be the first time you&#39;ve heard the terms
+controller or route, but it&#39;s also not the goal to master Node before you get
+here. With that in mind, feel free to spend as much time as you&#39;d like
+exploring Node through the following tutorials. However, we&#39;re going to cover
+all of this in depth during the semester so it&#39;s probably best to use these
+turorials as a guide for the component skills you&#39;ll need to build web
+applications. For example, how much Javascript do I need to know? Can be answered by
+building a Node application and seeing how much Javascript you need to know.</p>
+
+<h3>Learning Objectives</h3>
+
+<ol>
+<li>Understand request and response flow</li>
+<li>The MVC Pattern</li>
+<li>Routes and URLs</li>
+<li>The Params Object</li>
+</ol>
+
+<h3><a href="https://www.codeschool.com/courses/real-time-web-with-node-js">Realtime Web with Node</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/real-time-web-with-node-js">https://www.codeschool.com/courses/real-time-web-with-node-js</a></p>
+
+<p>NodeJS, the new server side cool kid on the block. That&#39;s right, learning Node will make you way cooler than most of your developer friends. No offense ¯\_(ツ)_/¯.</p>
+
+<h3><a href="https://www.codeschool.com/courses/building-blocks-of-express-js">Building Blocks of Express</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/building-blocks-of-express-js">https://www.codeschool.com/courses/building-blocks-of-express-js</a></p>
+
+<p>Express.js, the RESTful API framework for Node.</p>
+
+<h1>Advanced Topics in Training</h1>
+
+<h2>Aesthetics</h2>
+
+<h3><a href="http://teamtreehouse.com/library/websites/website-basics/website-basics">Website Basics</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/website-basics/website-basics">http://teamtreehouse.com/library/websites/website-basics/website-basics</a></p>
+
+<p>Beyond HTML and CSS, there are several basic technology skills that every web
+professional should know. Some of these include uploading files to the web via
+FTP or purchasing domains and hosting.</p>
+
+<h3><a href="http://teamtreehouse.com/library/websites/technology-foundations/graphic-basics">Graphic Basics</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/technology-foundations/graphic-basics">http://teamtreehouse.com/library/websites/technology-foundations/graphic-basics</a></p>
+
+<p>Graphic basics is for developers and designers alike, to become familiar with
+the difference between vector and raster, units and increments and saving for
+the web.</p>
+
+<h3><a href="http://teamtreehouse.com/library/websites/aesthetic-foundations">Aesthetic Foundation</a></h3>
+
+<p><a href="http://teamtreehouse.com/library/websites/aesthetic-foundations">http://teamtreehouse.com/library/websites/aesthetic-foundations</a></p>
+
+<p>Aesthetic Foundations will cover the elements and principles of art, along with
+color theory. This basic knowledge will provide a design language that enables
+more effective communication amongst designers and other team members.</p>
+
+<h3><a href="https://www.codeschool.com/courses/fundamentals-of-design">Fundamentals of Design</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/fundamentals-of-design">https://www.codeschool.com/courses/fundamentals-of-design</a></p>
+
+<p>Improve the visual competency of any website or application by keeping design in 
+mind. Learn the fundamental design principles of typography, color and layout.</p>
+
+<h2>Javascript</h2>
+
+<h3><a href="https://www.codeschool.com/courses/javascript-road-trip-part-1">Javascript Roadtrip Part 1</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/javascript-road-trip-part-1">https://www.codeschool.com/courses/javascript-road-trip-part-1</a></p>
+
+<p>An introduction to the very basics of the JavaScript language. Build a foundation 
+of JavaScript syntax and learn how to use values, variables, and files.</p>
+
+<h3><a href="https://www.codeschool.com/courses/try-jquery">Try jQuery</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/try-jquery">https://www.codeschool.com/courses/try-jquery</a></p>
+
+<p>Simplify web development with the amazing javascript library jQuery, in use by
+over 220 million websites.</p>
+
+<h3><a href="https://www.codeschool.com/courses/jquery-the-return-flight">jQuery The Return Flight</a></h3>
+
+<p><a href="https://www.codeschool.com/courses/jquery-the-return-flight">https://www.codeschool.com/courses/jquery-the-return-flight</a></p>
+
+<p>Now that you&#39;ve got the basics of javascript and jquery, take flight as a
+captain of the browser (or something)!</p>
+
+<h1>About</h1>
+
+<h2>Credits</h2>
+
+<p>First, we&#39;d love to thank all the amazing people who created these source
+materials. Most of it is from CodeSchool and Treehouse, with a bit from Zed
+Shaw, and some from the people at Skillcrush. Obviously there are a lot more
+resources out there for learning these topics. This guide is just my current
+preferences and tries to put them in a linear fashion so skills can build upon
+each other. Hope it helps someone. The biggest acknowledgement goes to the Flatiron School that created this idea.</p>
+
+          </div>
+        </div>
+        <div id="footer">
+          <hr>
+          <footer>
+            This Is Andela
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+$(".document").toc ({
+  showAlways:true});
+  </script>
+
+</body>
+</html>
