@@ -9,7 +9,7 @@ Andela exists to train and accelerate the hidden problem solver potential that e
 
 Our teaching tool of choice is Javascript so it is best to give yourself some background of that before the bootcamp begins.
 
-Here are some materials that you have to complete and understand before your quest begins: 
+Here are some materials that you have to complete and understand before your quest begins:
 
 ## Materials
 

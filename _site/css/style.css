@@ -7,18 +7,18 @@ footer {text-align: center; margin-bottom: 20px; }
 
 body { color: #000; background-color: #fff; }
 body::after{
-	content:"";
-	background-image: url('../img/AndelaHackathon2.jpg');
-	background-size: 100%;
-	background-attachment: fixed;
-	border: 1px solid black;
-	opacity: 0.15;
-	top:0;
-	left:0;
-	bottom:0;
-	right:0;
-	position: fixed;
-	z-index: -1;
+    content:"";
+    background-image: url('../img/AndelaHackathon2.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    border: 1px solid black;
+    opacity: 0.15;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    position: fixed;
+    z-index: -1;
 }
 body, p, input, select, button, textarea, code, pre, .navbar-search .search-query { font-family: Inconsolata; font-size: 15px; }
 a { color: #f38532; font-weight: bold; }
@@ -83,4 +83,7 @@ dt {
 div.nav{top: 20px; position: fixed; left: 20px; width: 248px;}
 div.nav div.well {padding: 0}
 ul.nav{padding: 2px 19px 19px 19px}
-footer{  font-weight: bold; }
+td {width: 400px;}
+table tr th {padding: 5px;}
+table tr td {padding: 10px;}
+footer{font-weight: bold; }
