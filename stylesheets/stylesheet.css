@@ -473,9 +473,6 @@ div#module1{
   font-size: 16px; 
   text-transform: capitalize;
   text-decoration: none; 
-  /*border-top: solid 1px #333;
-  border-right: solid 1px #333;
-  border-left: solid 1px #fff;*/
   cursor: pointer;
 }
 
