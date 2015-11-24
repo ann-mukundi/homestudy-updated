@@ -465,9 +465,7 @@ div#module1{
 
 #feedback a { 
   display: block; 
-  background: #0090ff; 
-  height: 15px; 
-  /*width: 70px;*/
+  background: #0090ff;
   padding: 8px 16px;
   color: #ffffff;  
   font-size: 16px; 
