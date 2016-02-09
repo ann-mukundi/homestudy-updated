@@ -21,12 +21,16 @@ $(function(){
 
 //change state of btn when 
 function paginate_modules(displayed, modules) {
-	var btns = $(".paginate ul li a"), btn;
+	var btns = $(".paginate ul li a"), btn, current = "1";
 
 	$(btns).click(function(e) {
 		e.preventDefault();
 
 		btn = $(this)[0].id;
+
+		if (btn !== "prev" && btn !== "next") {
+			current = btn;
+		}
 
 		//hide all modules
 		$(".modules").hide();
@@ -34,23 +38,44 @@ function paginate_modules(displayed, modules) {
 		//remove active state
 		$(btns).removeClass();
 
-		//add active state
-		$(this).attr("class","active");
-
-		$("#module"+btn).show();
-
+		//display appropriate module
+		current = process_btn(current, btn);
+		
 		//scroll to the loaded module
 		//$('html body').scrollTop($(btn));
 
-		process_prev_btn_state("#module"+btn);
-		process_next_btn_state("#module"+btn);
+		process_prev_btn_state("#module"+current);
+		process_next_btn_state("#module"+current);
+
 	});
 
-
+	return;
 }
 
-function process_btn() {
+function process_btn(current, btn) {
+	if(btn === "prev") {
+		$("#module"+current).prev().show();
+		//add active state
+		$("#"+(current - 1)).attr("class","active");
+		//process prev
+		return current - 1;
+	}
 
+	if(btn === "next") {
+		$("#module"+current).next().show();
+		current = parseInt(current, 10);
+		//add active state
+		$("#"+(current + 1)).attr("class","active");
+		
+		return current + 1;
+	}
+
+	$("#module"+btn).show();
+		
+	//add active state
+	$("#"+btn).attr("class","active");
+
+	return btn;
 }
 
 //hide/show prev button
