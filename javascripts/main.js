@@ -40,9 +40,11 @@ function paginate_modules(displayed, modules) {
 
 		//display appropriate module
 		current = process_btn(current, btn);
-		
+
 		//scroll to the loaded module
-		//$('html body').scrollTop($(btn));
+		var myElement = document.getElementById("module"+current);
+		var topPos = myElement.offsetTop;
+		document.body.scrollTop = topPos;
 
 		process_prev_btn_state("#module"+current);
 		process_next_btn_state("#module"+current);
