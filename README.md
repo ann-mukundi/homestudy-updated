@@ -1,4 +1,4 @@
 # HomeStudy
 Andela's home study curriculum
 
-Go to http://andela.github.io/homestudy to view the home study curriculum
+Go to http://curriculu.andela.co to view the home study curriculum
