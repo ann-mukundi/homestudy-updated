@@ -1,0 +1,418 @@
+[{
+    "name": "Intro to Computer Science",
+    "overview": "In this module, we will introduce basic computer science concepts. We will cover all the areas required to get you to the point of understanding what a computer scientist does.",
+    "objectives": [
+      "What computer science is.",
+      "What a computer scientist does.",
+      "Basic computer science vocabulary.",
+      "The core concepts in computer science."
+    ],
+    "content": [{
+      "coverage": "1",
+      "name": "what-is-csc",
+      "title": "What is Computer Science",
+      "link": "http://interactivepython.org/courselib/static/pythonds/Introduction/WhatIsComputerScience.html"
+    }, {
+      "coverage": "3, 4",
+      "name": "key-csc-concepts",
+      "link": "http://carlcheo.com/compsci",
+      "title": "40 key Computer Science Concepts Explained in Layman Terms"
+    }]
+  }, {
+    "name": "Introduction to Programming",
+    "overview": "Computer programming is the act of writing a sequence of instructions to a computer to perform a specific task. This module will cover the basics of programming and provide an overview of computer programming.",
+    "objectives": [
+      "What programming is.",
+      "Identify basic elements in computer programming.",
+      "The Python / JavaScript programming language.",
+      "Variables, data types and control structures in Python / JavaScript.",
+      "Functions and modules in Python / JavaScript."
+    ],
+    "content": [{
+      "coverage": "1",
+      "name": "what-is-programming",
+      "title": "What is Programming",
+      "link": "http://interactivepython.org/courselib/static/pythonds/Introduction/WhatIsProgramming.html"
+    }, {
+      "coverage": "1",
+      "name": "programming-overview",
+      "title": "Computer Programming Overview",
+      "link": "http://www.tutorialspoint.com/computer_programming/computer_programming_overview.htm"
+    }, {
+      "coverage": "1",
+      "name": "programming-basics",
+      "title": "Computer Programming Basics",
+      "link": "http://www.tutorialspoint.com/computer_programming/computer_programming_basics.htm"
+    }, {
+      "coverage": "2",
+      "name": "programming-environment",
+      "title": "Computer Programming Environment",
+      "link": "http://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm"
+    }, {
+      "lang": "py",
+      "coverage": "3,4,5",
+      "name": "codecademy-python-course--py",
+      "title": "Codecademy Python Course",
+      "link": "https://www.codecademy.com/learn/python"
+    }, {
+      "lang": "js",
+      "coverage": "3,4,5",
+      "name": "codecademy-js-course--js",
+      "title": "Codecademy JavaScript Course",
+      "link": "https://www.codecademy.com/learn/learn-javascript"
+    }, {
+      "lang": "py",
+      "coverage": "3,4,5",
+      "name": "googledevs-python-intro--py",
+      "title": "Google Developers: Python Introduction",
+      "link": "https://developers.google.com/edu/python/introduction"
+    }, {
+      "lang": "js",
+      "coverage": "3,4,5",
+      "name": "mdn-js-intro--js",
+      "title": "MDN JavaScript Introduction",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction"
+    }, {
+      "lang": "py",
+      "coverage": "3,4,5",
+      "name": "recap-python-essentials--py",
+      "title": "Recap Python Essentials",
+      "link": "http://opentechschool.github.io/python-data-intro/core/recap.html"
+    }, {
+      "lang": "js",
+      "coverage": "3,4,5",
+      "name": "js-first-steps--js",
+      "title": "JavaScript First Steps",
+      "link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps"
+    }, {
+      "lang": "js",
+      "coverage": "3,4,5",
+      "name": "js-building-blocks--js",
+      "title": "JavaScript Buulding Blocks",
+      "link": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks"
+    }]
+  }, {
+    "name": "Object Oriented Programming",
+    "overview": "Object oriented programming is a paradigm and a way of thinking that helps programmers effectively model real-life scenarios. In this module, we will cover general OOP concepts and OOP in Python / JavaScript.",
+    "objectives": [
+      "Object oriented programming concepts, classes and objects.",
+      "Implement object oriented programming concepts in Python / JavaScript."
+    ],
+    "content": [{
+      "coverage": "1",
+      "name": "what-is-oop",
+      "title": "What is Object Oriented Programming "
+    }, {
+      "lang": "py",
+      "coverage": "1, 2",
+      "name": "py-oop--py",
+      "title": "Python Object Oriented Programming"
+    }, {
+      "lang": "js",
+      "coverage": "1, 2",
+      "name": "js-oop--js",
+      "title": "Introducing JavaScript Objects"
+    }, {
+      "lang": "py",
+      "coverage": "1, 2",
+      "name": "oop-in-py--py",
+      "title": "Object Oriented Programming in Python"
+    }, {
+      "lang": "js",
+      "coverage": "1, 2",
+      "name": "js-classes--js",
+      "title": "JavaScript Classes"
+    }, {
+      "lang": "js",
+      "coverage": "1, 2",
+      "name": "es-classes--js",
+      "title": "A Deep Dive Into ES6 Classes"
+    }]
+  }, {
+    "name": "Data Structures",
+    "overview": "A data structure is a logical concept that introduces a way to organize data so the data can be immediately available to the processor for required calculations. This module will cover ways in which data is stored for efficient search and retrieval.",
+    "objectives": [
+      "What data structures are.",
+      "How data structures are used.",
+      "The different data structure classifications.",
+      "Data structures in Python."
+    ],
+    "content": [{
+      "coverage": "1, 2, 3",
+      "name": "intro-datastructures",
+      "title": "Introduction to Data Structures "
+    }, {
+      "coverage": "1, 2, 3",
+      "name": "why-datastructures",
+      "title": "Why Study Data Structures and Abstract Data Types?"
+    }, {
+      "coverage": "1, 2, 3",
+      "name": "basic-datastructures-algols",
+      "title": "Introduction to Basic Data Structures & Algorithms"
+    }, {
+      "lang": "py",
+      "coverage": "4",
+      "name": "py-builtin-datastructures--py",
+      "title": "Codecademy’s Python’s built in Data Structures "
+    }, {
+      "lang": "js",
+      "coverage": "4",
+      "name": "js-types-and-datastructures--js",
+      "title": "JavaScript Data Types & Data Structures"
+    }, {
+      "lang": "py",
+      "coverage": "4",
+      "name": "py-data-intro--py",
+      "title": "Data Structures in Python"
+    }, {
+      "lang": "js",
+      "coverage": "4",
+      "name": "js-data-intro--js",
+      "title": "Data Structures in JavaScript"
+    }, {
+      "lang": "py",
+      "coverage": "4",
+      "name": "py-advanced-datastructures--py",
+      "title": "Advanced Python Data Structures"
+    }]
+ }, {
+    "name": "Algorithms",
+    "overview": "Computer scientists learn by experience. We learn by seeing other people solve problems and by solving problems ourselves. Exposing us to different problem-solving techniques and seeing how algorithms are designed helps us take on challenging problems.",
+    "objectives": [
+      "The principles of algorithms.",
+      "The importance of algorithms.",
+      "Algorithm analysis.",
+      "Algorithms and how they are implemented in Python / JavaScript."
+    ],
+    "content": [{
+      "coverage": "1, 2",
+      "name": "algols-from-scratch",
+      "title": "Learning Algorithms from Scratch"
+    }, {
+      "coverage": "1, 2",
+      "name": "algols-for-beginners",
+      "title": "Algorithms for Beginners"
+    }, {
+      "coverage": "1, 2",
+      "name": "importance-of-algols",
+      "title": "The Importance of Algorithms"
+    }, {
+      "coverage": "1, 2",
+      "name": "what-is-algol-analysis",
+      "title": "What Is Algorithm Analysis?"
+    }]
+ }, {
+    "name": "Recursion",
+    "overview": "Recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem. We have seen that functions are named procedures which perform distinct tasks or services. This module will address recursion as a technique involving the use of functions.",
+    "objectives": [
+      "What recursion is about.",
+      "Types of recursion.",
+      "Recursive functions.",
+      "When to use recursive functions.",
+      "Advantages and disadvantages of recursion.",
+      "Difference between recursion and iteration.",
+      "How recursive functions in Python / JavaScript are written."
+    ], 
+    "content": [{
+      "coverage": "1, 7",
+      "name": "intro-to-recursion",
+      "title": "An Introduction to Recursion"
+    }, {
+      "coverage": "1, 7",
+      "name": "multiple-related-decisions",
+      "title": "Multiple Related Decisions"
+    }, {
+      "coverage": "2",
+      "name": "recursion-applicative-programming",
+      "title": "Recursion and Applicative Programming"
+    }, {
+      "coverage": "3, 4",
+      "name": "recursive-functions",
+      "title": "Recursive Functions"
+    }, {
+      "lang": "py",
+      "coverage": "3, 5",
+      "name": "py-recursion--py",
+      "title": "Python Recursion"
+    }, {
+      "lang": "js",
+      "coverage": "3, 5",
+      "name": "js-recursion--js",
+      "title": "Understanding Recursion in JavaScript"
+    }, {
+      "coverage": "6",
+      "name": "iteration-vs-recursion",
+      "title": "Iteration vs Recursion"
+    }]
+ }, {
+    "name": "Sorting and Searching",
+    "overview": "In this module, we will introduce algorithms for sorting and searching.",
+    "objectives": [
+      "The importance of sorting and searching in computer science.",
+      "Different sorting and searching algorithms.",
+      "Implement sorting and searching techniques in Python / JavaScript."
+    ],
+    "content": [{
+      "coverage": "1,2",
+      "name": "sorting-n-searching",
+      "title": "Searching and Sorting"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-sorting-searching-algol-analysis--py",
+      "title": "Python Searching and Sorting"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-bubble-sort--py",
+      "title": "Python - The Bubble Sort"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-insertion-sort--py",
+      "title": "Python - The Insertion Sort"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-selection-sort--py",
+      "title": "Python - The Selection Sort"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-merge-sort--py",
+      "title": "Python - The Merge Sort"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-quick-sort--py",
+      "title": "Python - The Quick Sort"
+    }, {
+      "lang": "py",
+      "coverage": "2, 3",
+      "name": "py-binary-search--py",
+      "title": "Python - The Binary Search"
+    }, {
+      "lang": "py",
+      "coverage": "3",
+      "name": "py-sorting-alogols-impl--py",
+      "title": "Basic Sorting Algorithms Implemented in Python"
+    }, {
+      "lang": "js",
+      "coverage": "2, 3",
+      "name": "js-sorting-alogols-in-js--js",
+      "title": "Sorting Algorithms in JavaScript"
+    }, {
+      "lang": "js",
+      "coverage": "2, 3",
+      "name": "js-sorting-alogols-series--js",
+      "title": "JavaScript Sorting Algorithms"
+    }]
+ }, {
+    "name": "Software Engineering",
+    "overview": "This module will cover all the phases of software development. Starting from software requirement analysis, to design, to implementation, to testing, to deployment and finally to maintenance.",
+    "objectives": [
+      "What software engineering is about.",
+      "What a computer software engineer does.",
+      "The two main branches of software engineering.",
+      "The software development life cycle.",
+      "The different software development paradigms."
+    ],
+    "content": [{
+      "coverage": "1",
+      "name": "software-eng-everview",
+      "title": "Software Engineering Overview"
+    }, {
+      "coverage": "2, 3",
+      "name": "what-a-software-eng-does",
+      "title": "What does a Computer Software Engineer do?"
+    }, {
+      "coverage": "4, 5",
+      "name": "software-dlc",
+      "title": "Software Development Life Cycle Overview"
+    }]
+ }, {
+    "name": "The Internet",
+    "overview": "In this module, we will cover what the internet is and how it works.",
+    "objectives": [
+      "What the internet is.",
+      "How the internet works.",
+      "Basic internet tools or concepts.",
+      "Networking.",
+      "The World Wide Web."
+    ],
+    "content": [{
+      "coverage": "1, 3",
+      "name": "what-is-the-internet",
+      "title": "What is The Internet",
+      "link": "https://www.computerhope.com/jargon/i/internet.htm"
+    }, {
+      "coverage": "2, 3",
+      "name": "how-the-internet-works",
+      "title": "How The Internet Works",
+      "link": "https://blog.hubspot.com/marketing/how-the-internet-works#sm.0000i8dcdo167uepfr7g8tvppgibd"
+    }, {
+      "coverage": "2, 3",
+      "name": "simple-how-the-internet-works",
+      "title": "How The Internet Works (Simpler)",
+      "link": "http://adrianland.uk/howto/how-does-the-internet-work/"
+    }, {
+      "coverage": "3",
+      "name": "what-is-email",
+      "title": "What Is Email",
+      "link": "http://searchexchange.techtarget.com/definition/e-mail-electronic-mail-or-email"
+    }, {
+      "coverage": "4",
+      "name": "computer-networks",
+      "title": "Introduction to Computer Networks",
+      "link": "http://www.ohio.edu/people/piccard/mis300/netintro.htm"
+    }, {
+      "coverage": "5",
+      "name": "how-www-works",
+      "title": "How The World Wide Web Works",
+      "link": "http://www.explainthatstuff.com/howthewebworks.html"
+    }]
+ }, {
+    "name": "Web Programming",
+    "overview": "This module will cover the fundamentals of web programming and technologies used in programming web pages.",
+    "objectives": [
+      "Basics of HTTP.",
+      "Use HTML and CSS to create web pages.",
+      "Use Javascript to create interactive web pages.",
+      "Basics of MVC."
+    ],
+    "content": [{
+      "coverage": "1",
+      "name": "protocol-http",
+      "title": "HTTP: The Protocol Every Web Developer Must Know",
+      "link": "https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177"
+    }, {
+      "coverage": "2",
+      "name": "htmlfive-tutorial",
+      "title": "HTML5 Tutorial",
+      "link": "https://www.w3schools.com/html/"
+    }, {
+      "coverage": "2",
+      "name": "css-tutorial",
+      "title": "CSS Tutorial",
+      "link": "https://www.w3schools.com/css/default.asp"
+    }, {
+      "coverage": "2",
+      "name": "html-css-course",
+      "title": "HTML / CSS Tutorial",
+      "link": "https://www.codecademy.com/learn/web"
+    }, {
+      "coverage": "3",
+      "name": "the-modern-javascript-tutorial--js",
+      "title": "The Modern JavaScript Tutorial",
+      "link": "https://javascript.info/"
+    }, {
+      "lang": "js",
+      "coverage": "3",
+      "name": "codecademy-js-course--js",
+      "title": "Codecademy JavaScript Course"
+    }, {
+      "coverage": "4",
+      "name": "mvc-explained-with-legos",
+      "title": "Model-View-Controller (MVC) Explained"
+    }]
+ }]

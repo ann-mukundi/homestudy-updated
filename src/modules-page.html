@@ -1,0 +1,212 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="md-styles.html">
+<link rel="import" href="highlight-styles.html">
+
+<script src="highlight/highlight.pack.js"></script>
+
+<dom-module id="modules-page">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      marked-element{
+        margin: 20px;
+      }
+
+      #studyres [lang]{
+        opacity: 1;
+        visibility: visible;
+        display: inline-block;
+        transition: opacity .8s ease-in-out;
+      }
+
+      #studyres [lang].off{
+        opacity: 0;
+        display: none;
+        visibility: hidden;
+      }
+    </style>
+    <style include="md-styles"></style>
+
+    <app-route route="[[route]]" pattern="/:module" data="{{routeData}}" tail="{{subroute}}">
+    </app-route>
+
+    <app-route route="{{subroute}}" pattern="/:resource" data="{{subrouteData}}">
+    </app-route>
+
+    <div class="page"> 
+
+      <template is="dom-if" if="{{!asResource}}">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+            <h1>
+              <div class="circle">{{moduleIndex}}</div>
+              {{content.name}}
+            </h1>
+
+            <template is="dom-if" if="{{content.overview}}">
+              <h3>Overview</h3>
+              <p>{{content.overview}}</p>
+            </template>
+
+            <template is="dom-if" if="{{content.objectives}}">
+              <h3>Learning Objectives</h3>
+              <p>By the end of this module, you should be able to understand:</p>
+              <ol>
+                <template is="dom-repeat" items="{{content.objectives}}">
+                  <li>{{item}}</li>
+                </template>
+              </ol>
+            </template>
+            
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+            <table class="full-width module-map mdl-data-table mdl-js-data-table mdl-shadow--3dp">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">
+                    <h3>Study Recource</h3>
+                  </th>
+                </tr>
+              </thead>
+              <tbody> 
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric module-resources">
+                    <ul id="studyres">
+                      <template is="dom-repeat" items="{{contentLinks}}" as="res">
+                          <li>
+                            <a lang$="[[res.lang]]" name="resource" href="modules/[[pathIndex]]/[[res.name]]">[[res.title]]</a>
+                          </li>
+                      </template>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+      
+      <template is="dom-if" if="{{asResource}}">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col">
+             <h1>
+              <div class="circle">{{moduleIndex}}</div>
+              {{content.name}}
+            </h1>
+            <h2>[[resource.title]]</h2>
+
+            <marked-element breaks="" sanitize="" smartypants="" on-syntax-highlight="_highlightSyntax">
+              <div slot="markdown-html"></div>
+              <script type="text/markdown" src="src/modules/[[pathIndex]]/[[resource.name]].md"></script>
+            </marked-element>
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <script>
+    class ModulesPage extends Polymer.Element {
+      static get is() { return 'modules-page'; }
+
+      static get properties() {
+        return {
+          route: {
+            type: Object,
+            observer: '_routeChanged'
+          },
+          python: {
+            type: Boolean,
+            value: false,
+            observer: '_pythonChanged',
+            reflectToAttribute: true
+          },
+          content: Object,
+          contentLinks: Array,
+          pathIndex: String,
+          moduleIndex: String,
+          localStore: {
+            type: Object,
+            value: {}
+          },
+          ahs: Array,
+          asResource: {
+            type: Boolean,
+            notify: true,
+            value: false,
+            reflectToAttribute: true
+          },
+          routeData: Object,
+          subrouteData: Object
+        };
+      }
+
+      _highlightSyntax(e, detail) {
+        detail.code = hljs.highlightAuto(detail.code).value;
+        return e;
+      }
+
+      _pythonChanged(){
+        if(this.content){
+          this.contentLinks = this._getContentLinks();
+        }
+      }
+
+      _getContentLinks() {
+        return this.content['content'].filter(cnt => {
+          const lang = cnt.lang;
+          const langUndefined = (lang === undefined);
+
+          // short circut if lang is not set
+          if(langUndefined === true) return true;
+
+          let include = langUndefined || false;
+          if(!langUndefined && this.python === true){
+            include = /--py$/.test(cnt.name);
+          }else if(!langUndefined && this.python === false){
+            include = /--js$/.test(cnt.name);
+          }
+          return include;
+        });
+      }
+
+      _routeChanged(data) {
+        this.asResource = false;
+        const path = data.path;
+        const mdlMatch = path.match(/\d{1,2}/);
+        if(mdlMatch){
+          this.pathIndex = mdlMatch[0];
+          this.moduleIndex = parseInt(this.pathIndex) + 1;
+          if(this.ahs){
+            this.content = this.ahs[ this.pathIndex ];
+            this.contentLinks = [];
+            this.contentLinks = this._getContentLinks();
+          }
+        }
+
+        const resMatch = path.match(/\d{1,2}\/[a-z-.]+/);
+        if(resMatch){
+          const pathParts = resMatch[0].split("/");
+          this.pathIndex = pathParts[0];
+          this.moduleIndex = parseInt(this.pathIndex) + 1;
+          if(this.ahs){
+            this.content = this.ahs[ this.pathIndex ];
+            this.asResource = true;
+            this.resource = this.content.content.find(itm => itm.name === pathParts[1]);
+          }
+        }
+      }
+
+    }
+
+    window.customElements.define(ModulesPage.is, ModulesPage);
+  </script>
+</dom-module>

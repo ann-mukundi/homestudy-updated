@@ -1,0 +1,109 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="my-icons.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="home-page">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+        background: url("../images/orange-glyph.png") 50% bottom no-repeat;
+      }
+
+      .color-white{
+        /*color: #f1f1f1;*/
+      }
+    </style>
+
+    <div class="page-wide">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+          <h1>Overview</h1>
+          <p class="color-white">The home study curriculum from Andela is here to help you build a solid foundation in programming.</p>
+          <p class="color-white">The curriculum includes everything that’s required to fully grasp the fundamentals of Computer Science, and gain a thorough understanding of Computer Science best practices through Python and JavaScript. 
+            By covering this curriculum, you will be comfortable with computing concepts -- empowering you to engage with a vibrant community of like-minded learners with all levels of experience.</p>
+          <p class="color-white">The curriculum is available for <a href="https://goo.gl/rwDP9h" target="_blank">download here</a>, and can be engaged with offline.</p>
+          <p>
+            <span class="call-to-action">
+              Want to be a world class software developer ? <br>
+              <a href="http://apply.andela.com/" target="_blank">Apply to the Andela Fellowship.</a>
+            </span>
+          </p>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+
+          <h1>Structure</h1>
+          <table class="full-width mdl-data-table mdl-js-data-table mdl-shadow--3dp">
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric">Module</th>
+                <th class="mdl-data-table__cell--non-numeric">Python</th>
+                <th class="mdl-data-table__cell--non-numeric">JavaScript</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Introduction to Computer Science</td>
+                <td class="mdl-data-table__cell--non-numeric" colspan="2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Introduction to Programming</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Object Oriented Programming</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Data Structures</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Algorithms</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Recursion</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Sorting &amp; Searching</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Software Engineering</td>
+                <td class="mdl-data-table__cell--non-numeric" colspan="2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">The Internet</td>
+                <td class="mdl-data-table__cell--non-numeric" colspan="2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Web Programming</td>
+                <td class="mdl-data-table__cell--non-numeric">&nbsp;</td>
+                <td class="mdl-data-table__cell--non-numeric"><paper-icon-button icon="my-icons:check-circle"></paper-icon-button></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div> 
+      </div> 
+    </div>
+  </template>
+
+  <script>
+    class HomePage extends Polymer.Element {
+      static get is() { return 'home-page'; }
+    }
+
+    window.customElements.define(HomePage.is, HomePage);
+  </script>
+</dom-module>

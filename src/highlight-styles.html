@@ -1,0 +1,108 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<!-- styles to highlight fenced code blocks -->
+<dom-module id="highlight-styles">
+  <template>
+    <style>
+
+      /*
+      Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+      */
+
+      [slot="markdown-html"] pre > code .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #F0F0F0;
+      }
+
+
+      /* Base color: saturation 0; */
+
+      [slot="markdown-html"] pre > code .hljs,
+      [slot="markdown-html"] pre > code .hljs-subst {
+        color: #444;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-comment {
+        color: #888888;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-keyword,
+      [slot="markdown-html"] pre > code .hljs-attribute,
+      [slot="markdown-html"] pre > code .hljs-selector-tag,
+      [slot="markdown-html"] pre > code .hljs-meta-keyword,
+      [slot="markdown-html"] pre > code .hljs-doctag,
+      [slot="markdown-html"] pre > code .hljs-name {
+        font-weight: bold;
+      }
+
+
+      /* User color: hue: 0 */
+
+      [slot="markdown-html"] pre > code .hljs-type,
+      [slot="markdown-html"] pre > code .hljs-string,
+      [slot="markdown-html"] pre > code .hljs-number,
+      [slot="markdown-html"] pre > code .hljs-selector-id,
+      [slot="markdown-html"] pre > code .hljs-selector-class,
+      [slot="markdown-html"] pre > code .hljs-quote,
+      [slot="markdown-html"] pre > code .hljs-template-tag,
+      [slot="markdown-html"] pre > code .hljs-deletion {
+        color: #880000;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-title,
+      [slot="markdown-html"] pre > code .hljs-section {
+        color: #880000;
+        font-weight: bold;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-regexp,
+      [slot="markdown-html"] pre > code .hljs-symbol,
+      [slot="markdown-html"] pre > code .hljs-variable,
+      [slot="markdown-html"] pre > code .hljs-template-variable,
+      [slot="markdown-html"] pre > code .hljs-link,
+      [slot="markdown-html"] pre > code .hljs-selector-attr,
+      [slot="markdown-html"] pre > code .hljs-selector-pseudo {
+        color: #BC6060;
+      }
+
+
+      /* Language color: hue: 90; */
+
+      [slot="markdown-html"] pre > code .hljs-literal {
+        color: #78A960;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-built_in,
+      [slot="markdown-html"] pre > code .hljs-bullet,
+      [slot="markdown-html"] pre > code .hljs-code,
+      [slot="markdown-html"] pre > code .hljs-addition {
+        color: #397300;
+      }
+
+
+      /* Meta color: hue: 200 */
+
+      [slot="markdown-html"] pre > code .hljs-meta {
+        color: #1f7199;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-meta-string {
+        color: #4d99bf;
+      }
+
+
+      /* Misc effects */
+
+      [slot="markdown-html"] pre > code .hljs-emphasis {
+        font-style: italic;
+      }
+
+      [slot="markdown-html"] pre > code .hljs-strong {
+        font-weight: bold;
+      }
+
+    </style>
+  </template>
+</dom-module>

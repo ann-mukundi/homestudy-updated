@@ -1,0 +1,310 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-localstorage/iron-localstorage.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
+<link rel="import" href="../bower_components/paper-toggle-button/paper-toggle-button.html">
+
+<link rel="import" href="my-icons.html">
+
+<link rel="lazy-import" href="home-page.html">
+<link rel="lazy-import" href="modules-page.html">
+<link rel="lazy-import" href="ahs-view404.html">
+
+<dom-module id="andela-homestudy">
+  <template>
+    <style>
+      :host {
+        --app-primary-color: #3F51B5;
+        --app-secondary-color: black;
+        --app-primary-color-lite: #4285f4;
+        --app-andela-logo-blue: #3260DA;
+
+        display: block;
+        /*background: url("../images/orange-glyph.png") 50% bottom no-repeat;*/
+      }
+
+      :host app-header{
+        --paper-toggle-button-unchecked-bar-color: #fff;
+        --paper-toggle-button-checked-bar-color : #FFD845;
+        --paper-toggle-button-checked-button-color : #FFD845;
+      }
+
+      app-drawer-layout:not([narrow]) [drawer-toggle] {
+        display: none;
+      }
+
+      app-header {
+        color: #fff;
+        background-color: var(--app-primary-color);
+      }
+
+      app-header a{
+        color: #fff;
+      }
+
+      app-header a:hover{
+        color: #f6f6f6;
+      }
+
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      app-header[fixed] app-toolber{
+        overflow: hidden;
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+        line-height: 40px;
+      }
+
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
+
+      [main-title]{
+        height: 64px;
+        overflow: hidden;
+      }
+
+      [main-title] .span-logo{
+        height: 58px;
+        display: inline-block;
+        /*padding: 1em 0 0.5em 0;*/
+        background: var(--app-andela-logo-blue);
+      }
+
+      [main-title] .title-span{
+        background: var(--app-andela-logo-blue);
+        height: 42px;
+        display: inline-block;
+        padding: 1em 1em 0.5em 0.5em;
+        margin-left: -0.5em;
+        position: relative;
+        opacity: 1;
+        top: -26px;
+        transition: opacity 1s ease-in-out;
+      }
+
+      @media (max-width: 550px) {
+        [main-title] .title-span{
+          display: none;
+          opacity: 0;
+        }
+
+        [main-title] .span-logo{
+          padding: 0;
+        }
+      }
+
+      .ribbon{
+        width: 100%;
+        height: 40vh;
+        background-color: var(--app-primary-color);
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+
+      #main-slackr{
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+      }
+    </style>
+
+    <app-location route="{{route}}"></app-location>
+    <app-route route="{{route}}" pattern="[[rootPattern]]:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+
+    <iron-localstorage name="ahs-app-storage" value="{{localStore}}" on-iron-localstorage-load="LocalStoreLoaded" on-iron-localstorage-load-empty="initializeLocalStore">
+    </iron-localstorage>
+    
+    <app-drawer-layout force-narrow="">
+      <!-- Drawer content -->
+      <app-drawer id="drawer" slot="drawer">
+        <app-toolbar>Structure</app-toolbar>
+        <iron-ajax url="src/modules/modules.json" last-response="{{ahsContent}}" auto=""></iron-ajax>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="home" href="home">Welcome</a>
+          <iron-list items="[[ahsContent]]" as="item">
+            <template><a name="modules" href="modules/[[index]]">[[item.name]]</a></template>
+          </iron-list>
+        </iron-selector>
+      </app-drawer>
+
+      <!-- Main content -->
+      <app-header-layout>
+
+        <app-header slot="header" fixed="">
+          <app-toolbar>
+            <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
+            <div main-title="">
+              <span class="span-logo">
+                <img src="images/andela-logo.png" alt="">
+              </span>
+              <span class="title-span">
+                Andela Home Study
+              </span>
+            </div>
+
+            <paper-icon-button hidden$="[[pageIsHome]]" id="py" icon="my-icons:js"></paper-icon-button>
+            <paper-toggle-button hidden$="[[pageIsHome]]" checked="{{pyChecked::change}}"></paper-toggle-button>
+            <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:py"></paper-icon-button>
+
+            <a href="http://goo.gl/forms/Tg3YrHvXzV" target="_blank" tabindex="-1">
+              <paper-icon-button id="feedback" icon="my-icons:feedback"></paper-icon-button>
+              <paper-tooltip for="feedback">Provide Feedback</paper-tooltip>
+            </a>
+
+            <a href="https://open-andela.slack.com" target="_blank">
+              <paper-icon-button id="openandela" icon="my-icons:slack"></paper-icon-button>
+              <paper-tooltip for="openandela">Join OpenAndela Slack</paper-tooltip>
+            </a>
+          </app-toolbar>
+
+        </app-header>
+
+        <div class="ribbons"></div>
+
+        <iron-pages id="pages" selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
+          <home-page name="home"></home-page>
+          <modules-page name="modules" route="[[subroute]]" ahs="[[ahsContent]]" python$="{{pyChecked}}"></modules-page>
+          <my-view404 name="view404"></my-view404>
+        </iron-pages>
+
+        <!-- <paper-icon-button id="main-slackr" icon="my-icons:slack"></paper-icon-button> -->
+
+      </app-header-layout>
+    </app-drawer-layout>
+  </template>
+
+  <script>
+    class AndelaHomeStudy extends Polymer.Element {
+
+      static get is() { return 'andela-homestudy'; }
+
+      static get properties() {
+        return {
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged',
+          },
+          pyChecked: {
+            type: Boolean,
+            value: true,
+            observer: '_pyCheckedChanged'
+          },
+          localStore: {
+            type: Object,
+            value: {}
+          },
+          pageIsHome: {
+            type: Boolean,
+            value: true
+          },
+          routeData: Object,
+          rootPattern: String,
+          moduleRoute: String
+        };
+      }
+
+      static get observers() {
+        return [
+          '_routePageChanged(routeData.page)',
+        ];
+      }
+
+      constructor() {
+        super();
+
+        let url = new URL(this.rootPath);
+        this.rootPattern = (new URL(this.rootPath)).pathname;
+      }
+
+      connectedCallback() {
+        super.connectedCallback();
+      }
+
+      _routePageChanged(page) {
+        // Polymer 2.0 will call with `undefined` on initialization.
+        // Ignore until we are properly called with a string.
+        if (page === undefined) {
+          return;
+        }
+
+        this.page = page || 'home';
+
+        if(this.page === 'home'){
+          this.pageIsHome = true;
+          this.notifyPath('pageIsHome');
+        }else{
+          this.pageIsHome = false;
+          this.notifyPath('pageIsHome');
+        }
+
+        if (!this.$.drawer.persistent) {
+          this.$.drawer.close();
+        }
+      }
+
+      _pageChanged(page) {
+        // Load page import on demand. Show 404 page if it fails
+        let resolvedPageUrl = this.resolveUrl(page + '-page.html');
+        Polymer.importHref(
+            resolvedPageUrl,
+            null, this._showPage404.bind(this), true);
+      }
+
+      _showPage404() {
+        this.page = 'ahs-view404';
+      }
+
+      _pyCheckedChanged() {
+        this.modifyLocalStore();
+      }
+
+      initializeLocalStore() {
+        this.localStore = {
+          usingPy: true
+        }
+      }
+
+      LocalStoreLoaded(e, detail) {
+        this.pyChecked = this.localStore.usingPy;
+      }
+
+      modifyLocalStore() {
+        this.localStore.usingPy = this.pyChecked;
+        this.notifyPath('localStore.usingPy');
+      }
+    }
+
+    window.customElements.define(AndelaHomeStudy.is, AndelaHomeStudy);
+  </script>
+</dom-module>

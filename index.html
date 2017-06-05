@@ -1,621 +1,72 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Andela Home Study : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/paginate.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="javascripts/main.js"></script>
     <title>Andela Home Study</title>
-  </head>
+    <meta name="description" content="Andela Home Study App">
 
+    <base href="/">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Home Study">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Home Study">
+
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <script>
+      // Register the base URL
+      const baseUrl = document.querySelector('base').href;
+
+      // Load and register pre-caching Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+        });
+      }
+    </script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <!-- Load AHS shell -->
+    <link rel="import" href="src/andela-homestudy.html">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en);
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        background-color: #fff;
+      }
+    </style>
+  </head>
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <span id="forkme_banner">Want to be a world class software developer?
-            <a href="http://apply.andela.com">Apply to the Andela Fellowship.</a>
-          </span>
-          
-          <h1 id="project_title">Andela Home Study</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <div id="feedback">
-        <a href="http://goo.gl/forms/Tg3YrHvXzV" target="_blank">Have feedback for us?</a>
-      </div>
-      <section id="main_content" class="inner">
-        <h1>
-        <a id="home-study" class="anchor" href="#home-study" aria-hidden="true"><span class="octicon octicon-link"></span></a>Home Study</h1>
-
-        <p>The home study curriculum from Andela is here to help you build a solid foundation in programming. </p>
-
-        <p>
-            The curriculum includes everything that’s required to fully grasp the fundamentals of computer science, and gain a thorough understanding of computer science best practices through Python. By covering this curriculum, you will be comfortable with computing concepts -- empowering you to engage with a vibrant community of like-minded learners with all levels of experience.
-        </p>
-        <p>
-            The curriculum is available for download <a href="https://goo.gl/rwDP9h" target="_blank">here</a> and can be engaged with offline.
-        </p>
-        <p>
-           
-        </p>
-
-        <p>
-            <strong>NB:</strong>
-            The Python programming examples in the resources below can be tested on 
-            <a target="_blank" href="http://www.learnpython.org">Learn Python</a>.
-        </p>
-
-        <br>
-        <h1>
-        <a id="curriculum" class="anchor" href="#curriculum" aria-hidden="true"><span class="octicon octicon-link"></span></a>Curriculum</h1>
-
-        <div class="modules" id="module1"><h2>
-        <a id="module-1---introduction-to-computer-science" class="anchor" href="#module-1---introduction-to-computer-science" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 1 - Introduction to Computer Science</h2>
-
-        <h4>
-        <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-        Overview
-        </h4>
-
-        <p>
-            In this module, we will introduce basic computer science concepts. We will cover all the areas required to get you to the point of understanding what a computer scientist does.
-        </p>
-
-        <h4>
-        <a id="learning-objectives" class="anchor" href="#learning-objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> What computer science is.</li>
-        <li> What a computer scientist does.</li>
-        <li> Basic computer science vocabulary.</li>
-        <li> The core concepts in computer science.</li>
-        </ol>
-
-        <h4>
-        <a id="resources" class="anchor" href="#resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://interactivepython.org/courselib/static/pythonds/Introduction/WhatIsComputerScience.html">What is computer science</a></td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="https://studio.code.org/unplugged/unplug1.pdf">Intro to the art of computer science</a></td>
-        <td>1, 2, 3</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://carlcheo.com/compsci">40 key computer science concepts explained in layman terms</a> <br>(<strong>NB</strong>: This link contains reference materials that can be viewed for further reading)</td>
-        <td>3, 4</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module2"><h2>
-        <a id="module-2---introduction-to-programming" class="anchor" href="#module-2---introduction-to-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 2 - Introduction to Programming</h2>
-
-        <h4>
-        <a id="overview-1" class="anchor" href="#overview-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>
-            Computer programming is the act of writing a sequence of instructions to a computer to perform a specific task. This module will cover the basics of programming and provide an overview of computer programming.
-        </p>
-
-        <h4>
-        <a id="learning-objectives-1" class="anchor" href="#learning-objectives-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> What programming is.</li>
-        <li> Identify basic elements in computer programming.</li>
-        <li> The Python programming language.</li>
-        <li> Variables, data types and control structures in Python.</li>
-        <li> Functions and modules in Python.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-1" class="anchor" href="#resources-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://interactivepython.org/courselib/static/pythonds/Introduction/WhatIsProgramming.html">What is Programming?</a>
-        <br>
-        <a target="_blank" href="http://www.tutorialspoint.com/computer_programming/computer_programming_overview.htm">Computer Programming overview</a>
-        <br>
-        <a target="_blank" href="http://www.tutorialspoint.com/computer_programming/computer_programming_basics.htm">Computer Programming Basics</a>
-        </td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://www.tutorialspoint.com/computer_programming/computer_programming_environment.htm">Computer Programming Environment</a></td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="https://www.codecademy.com/tracks/python">Codecademy Python Course</a> <br> <a target="_blank" href="https://developers.google.com/edu/python/introduction">Google Developers: Python Introduction</a> <br> <a target="_blank" href="http://opentechschool.github.io/python-data-intro/core/recap.html">Recap of Python essentials</a>
-        </td>
-        <td>3, 4, 5</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module3"><h2>
-        <a id="module-3---object-oriented-programming" class="anchor" href="#module-3---object-oriented-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 3 - Object Oriented Programming</h2>
-
-        <h4>
-        <a id="overview-2" class="anchor" href="#overview-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>
-            Object oriented programming is a paradigm and a way of thinking that helps programmers effectively model real-life scenarios. In this module, we will cover general OOP concepts and OOP in Python.
-        </p>
-
-        <h4>
-        <a id="learning-objectives-2" class="anchor" href="#learning-objectives-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> Object oriented programming concepts, classes and objects.</li>
-        <li> Implement object oriented programming concepts in Python.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-2" class="anchor" href="#resources-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://teknadesigns.com/what-is-object-oriented-programming/">What is Object Oriented Programming?</a></td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td>
-          <a target="_blank" href="http://www.python-course.eu/object_oriented_programming.php">Object oriented programming</a> <br>
-        <a target="_blank" href="https://www.jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Everything I know about Python</a> <br><a target="_blank" href="http://code.tutsplus.com/articles/python-from-scratch-object-oriented-programming--net-21476">Object Oriented Programming in Python</a>
-        </td>
-        <td>1, 2</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module4"><h2>
-        <a id="module-4---data-structures" class="anchor" href="#module-4---data-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 4 - Data Structures</h2>
-
-        <h4>
-        <a id="overview-3" class="anchor" href="#overview-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>
-            A data structure is a logical concept that introduces a way to organize data so the data can be immediately available to the processor for required calculations. This module will cover ways in which data is stored for efficient search and retrieval.
-        </p>
-
-        <h4>
-        <a id="learning-objectives-3" class="anchor" href="#learning-objectives-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> What data structures are.</li>
-        <li> How data structures are used.</li>
-        <li> The different data structure classifications.</li>
-        <li> Data structures in Python.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-3" class="anchor" href="#resources-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>
-        <a target="_blank" href="http://www.studytonight.com/data-structures/introduction-to-data-structures">Introduction to Data Structures</a> <br><a target="_blank" href="http://interactivepython.org/courselib/static/pythonds/Introduction/WhyStudyDataStructuresandAbstractDataTypes.html">Why data structures and abstract data types?</a> <br> <a target="_blank" href="http://cs-fundamentals.com/data-structures/introduction-to-data-structures.php">Introduction to basic data structures and algorithms</a>
-        </td>
-        <td>1, 2, 3</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="https://www.codecademy.com/courses/python-s-built-in-data-structures/0/0">Codecademy’s Python’s built in Data Structures</a> <br> <a target="_blank" href="http://opentechschool.github.io/python-data-intro/core/data.html">Introduction to Data Processing in Python</a> <br> <a target="_blank" href="http://code.tutsplus.com/articles/advanced-python-data-structures--net-32748">Advanced Python Data Structures</a>
-        </td>
-        <td>4</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module5"><h2>
-        <a id="module-5---algorithms" class="anchor" href="#module-5---algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 5 - Algorithms</h2>
-
-        <h4>
-        <a id="overview-4" class="anchor" href="#overview-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>
-            Computer scientists learn by experience. We learn by seeing other people solve problems and by solving problems ourselves. Exposing us to different problem-solving techniques and seeing how algorithms are designed helps us take on challenging problems.
-        </p>
-
-        <h4>
-        <a id="learning-objectives-4" class="anchor" href="#learning-objectives-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> The principles of algorithms.</li>
-        <li> The importance of algorithms.</li>
-        <li> Algorithm analysis.</li>
-        <li> Algorithms and how they are implemented in Python.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-4" class="anchor" href="#resources-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>
-        <a target="_blank" href="http://adrianmejia.com/blog/2011/12/22/learning-algorithms-from-scratch-algorithms-for-dummies/">Learning algorithms from scratch</a> <br> <a target="_blank" href="https://cs.anu.edu.au/people/Alistair.Rendell/Teaching/apac_comp3600/module1/introduction_to_algorithms.xhtml">Introduction to algorithms</a> <br> <a target="_blank" href="https://www.topcoder.com/community/data-science/data-science-tutorials/the-importance-of-algorithms/">The importance of algorithms</a>
-        </td>
-        <td>1, 2</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/WhatIsAlgorithmAnalysis.html">What is algorithm analysis</a></td>
-        <td>3</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="https://www.codecademy.com/courses/python-intermediate-en-NYXmc/0/1">Codecademy’s Pythonic Algorithms 101</a></td>
-        <td>4</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module6"><h2>
-        <a id="module-6---recursion" class="anchor" href="#module-6---recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 6 - Recursion</h2>
-
-        <h4>
-        <a id="overview-5" class="anchor" href="#overview-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>
-            Recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem. We have seen that functions are named procedures which perform distinct tasks or services. This module will address recursion as a technique involving the use of functions.
-        </p>
-
-        <h4>
-        <a id="learning-objectives-5" class="anchor" href="#learning-objectives-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> What recursion is about.</li>
-        <li> Types of recursion.</li>
-        <li> Recursive functions.</li>
-        <li> When to use recursive functions.</li>
-        <li> Advantages and disadvantages of recursion.</li>
-        <li> Difference between recursion and iteration.</li>
-        <li> How recursive functions in Python are written.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-5" class="anchor" href="#resources-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>
-        <a target="_blank" href="http://openbookproject.net/thinkcs/python/english3e/recursion.html">Recursion</a> <br> <a target="_blank" href="http://cscircles.cemc.uwaterloo.ca/16-recursion/">Working with Recursion in python</a>
-        </td>
-        <td>1, 7</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://courses.cs.washington.edu/courses/cse341/03wi/scheme/recursion.html">Recursion and Applicative programming</a></td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="https://www.cs.umd.edu/class/fall2002/cmsc214/Tutorial/recursion2.html">Recursive Functions</a></td>
-        <td>3, 4</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://www.programiz.com/python-programming/recursion">Python Recursion</a></td>
-        <td>3, 5</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://www2.hawaii.edu/%7Etp_200/lectureNotes/recursion.htm">Iteration vs Recursion</a></td>
-        <td>6</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module7"><h2>
-        <a id="module-7---sorting-and-searching" class="anchor" href="#module-7---sorting-and-searching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 7 - Sorting and Searching</h2>
-
-        <h4>
-        <a id="overview-6" class="anchor" href="#overview-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>In this module, we will introduce algorithms for sorting and searching.</p>
-
-        <h4>
-        <a id="learning-objectives-6" class="anchor" href="#learning-objectives-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> The importance of sorting and searching in computer science.</li>
-        <li> Different sorting and searching algorithms.</li>
-        <li> Implement sorting and searching techniques in Python.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-6" class="anchor" href="#resources-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://spector.io/computer-science-fundamentals-searching-and-sorting/">Searching and Sorting</a></td>
-        <td>1, 2</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://python-textbok.readthedocs.org/en/latest/Sorting_and_Searching_Algorithms.html">Sorting, Searching and Algorithm Analysis</a> <br> <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html">The Bubble sort</a> <br> <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheInsertionSort.html">The Insertion sort</a> <br> <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheSelectionSort.html">The Selection sort</a> <br> <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheMergeSort.html">The Merge sort</a> <br> <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html">The quick sort</a> <br> <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html">The Binary search</a>
-        </td>
-        <td>2, 3</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://danishmujeeb.com/blog/2014/01/basic-sorting-algorithms-implemented-in-python">Basic sorting algorithms implemented in Python</a></td>
-        <td>3</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module8"><h2>
-        <a id="module-8---software-engineering" class="anchor" href="#module-8---software-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 8 - Software Engineering</h2>
-
-        <h4>
-        <a id="overview-7" class="anchor" href="#overview-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>
-            This module will cover all the phases of software development. Starting from software requirement analysis, to design, to implementation, to testing, to deployment and finally to maintenance.
-        </p>
-
-        <h4>
-        <a id="learning-objectives-7" class="anchor" href="#learning-objectives-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> What software engineering is about.</li>
-        <li> What a computer software engineer does.</li>
-        <li> The two main branches of software engineering.</li>
-        <li> The software development life cycle.</li>
-        <li> The different software development paradigms.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-7" class="anchor" href="#resources-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://www.tutorialspoint.com/software_engineering/software_engineering_overview.htm">Software engineering overview</a></td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://tryengineering.org/ask-expert/what-does-computer-software-engineer-do-could-you-give-me-description-field">What does a Computer Software Engineer Do?</a></td>
-        <td>2, 3</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://www.tutorialspoint.com/sdlc/sdlc_quick_guide.htm">Software Development Life Cycle Overview</a></td>
-        <td>4, 5</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module9"><h2>
-        <a id="module-9---the-internet" class="anchor" href="#module-9---the-internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 9 - The Internet</h2>
-
-        <h4>
-        <a id="overview-8" class="anchor" href="#overview-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>In this module, we will cover what the internet is and how it works.</p>
-
-        <h4>
-        <a id="learning-objectives-8" class="anchor" href="#learning-objectives-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> What the internet is.</li>
-        <li> How the internet works.</li>
-        <li> Basic internet tools or concepts.</li>
-        <li> Networking.</li>
-        <li> The World Wide Web.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-8" class="anchor" href="#resources-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://www.newtechnologysite.com/internet/what_internet.html">What is the internet</a></td>
-        <td>1, 3</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://blog.hubspot.com/marketing/how-the-internet-works">How the internet works: An explanation even non-techies can understand</a> <br> <a target="_blank" href="http://adrianland.uk/howto/how-does-the-internet-work/">How does the internet work(simple version)</a>
-        </td>
-        <td>2, 3</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://www.roseburg.k12.or.us/depts/tech/StaffDev/Int4Ed/Resources/www7.html">Basic Internet tools</a> <br> <a target="_blank" href="http://www.newtechnologysite.com/internet/what_email.html">What is the email</a>
-        </td>
-        <td>3</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://www.petervaldivia.com/networks/">Networks</a> <br> <a target="_blank" href="http://betterexplained.com/articles/a-simple-introduction-to-computer-networking/">A simple introduction to computer networking</a>
-        </td>
-        <td>4</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="http://www.explainthatstuff.com/howthewebworks.html">How the world wide web works</a></td>
-        <td>5</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="modules" id="module10"><h2>
-        <a id="module-10---web-programming" class="anchor" href="#module-10---web-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module 10 - Web Programming</h2>
-
-        <h4>
-        <a id="overview-9" class="anchor" href="#overview-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h4>
-
-        <p>This module will cover the fundamentals of web programming and technologies used in programming web pages.</p>
-
-        <h4>
-        <a id="learning-objectives-9" class="anchor" href="#learning-objectives-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning Objectives</h4>
-
-        <p>By the end of this module, you should be able to understand:</p>
-
-        <ol>
-        <li> Basics of HTTP.</li>
-        <li> Use HTML and CSS to create web pages.</li>
-        <li> Use Javascript to create interactive web pages.</li>
-        <li> Basics of MVC.</li>
-        </ol>
-
-        <h4>
-        <a id="resources-9" class="anchor" href="#resources-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resources</h4>
-
-        <table>
-        <thead>
-        <tr>
-        <th>Resource Name</th>
-        <th>Objective Coverage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><a target="_blank" href="http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177">Http - A protocol every web developer must know part 1</a></td>
-        <td>1</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://www.w3schools.com/html/">HTML(5) Tutorial</a> <br> <a target="_blank" href="http://www.w3schools.com/css/default.asp">CSS Tutorial</a> <br> <a target="_blank" href="http://www.codecademy.com/en/tracks/web">HTML/CSS course</a>
-        </td>
-        <td>2</td>
-        </tr>
-        <tr>
-        <td>
-        <a target="_blank" href="http://www.w3schools.com/js/default.asp">Javascript Tutorial</a> <br> <a target="_blank" href="http://www.codecademy.com/tracks/javascript">Javascript course</a>
-        </td>
-        <td>3</td>
-        </tr>
-        <tr>
-        <td><a target="_blank" href="https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/">Model-View-Controller(MVC) Explained with Legos</a></td>
-        <td>4</td>
-        </tr>
-        </tbody>
-        </table></div>
-
-        <div class="paginate paginate-dark wrapper">
-            <ul>
-                <li><a href="" id="prev">&lang;</a></li>
-                <li><a href="" id="1" class="active">1</a></li>
-                <li><a href="" id="2">2</a></li>
-                <li><a href="" id="3">3</a></li>
-                <li><a href="" id="4">4</a></li>
-                <li><a href="" id="5">5</a></li>
-                <!-- <li><a href="" class="more">&hellip;</a></li> -->
-                <li><a href="" id="6">6</a></li>
-                <li><a href="" id="7">7</a></li>
-                <li><a href="" id="8">8</a></li>
-                <li><a href="" id="9">9</a></li>
-                <li><a href="" id="10">10</a></li>
-                <li><a href="" id="next">&rang;</a></li>
-            </ul>
-        </div>
-
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-          <p>This is Andela</p>
-      </footer>
-    </div>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-54977360-7', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
-</html>
+    <andela-homestudy></andela-homestudy>
+
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+    
+  
+
+</body></html>
