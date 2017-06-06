@@ -139,6 +139,9 @@
 
       constructor() {
         super();
+
+        let url = new URL(this.rootPath);
+        this.rootPattern = (new URL(this.rootPath)).pathname;
       }
 
       static get properties() {
@@ -227,6 +230,8 @@
             this.resource = this.content.content.find(itm => itm.name === pathParts[1]);
           }
         }
+
+        ga('send', 'pageview', `${this.rootPattern}modules/${path}`);
       }
 
     }

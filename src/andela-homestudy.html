@@ -34,7 +34,6 @@
         --paper-fab-keyboard-focus-background: #ddd;
 
         display: block;
-        /*background: url("../images/orange-glyph.png") 50% bottom no-repeat;*/
       }
 
       :host app-header{
@@ -179,12 +178,14 @@
             <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:py"></paper-icon-button>
 
             <a href="http://goo.gl/forms/Tg3YrHvXzV" target="_blank" tabindex="-1">
-              <paper-icon-button id="feedback" icon="my-icons:feedback"></paper-icon-button>
+              <paper-icon-button id="feedback" icon="my-icons:feedback" on-click="_tappedFeedbackLink">
+              </paper-icon-button>
               <paper-tooltip for="feedback">Provide Feedback</paper-tooltip>
             </a>
 
-            <a href="https://open-andela.slack.com" target="_blank">
-              <paper-icon-button id="openandela" icon="my-icons:slack"></paper-icon-button>
+            <a href="https://open-andela.slack.com" target="_blank" tabindex="-1">
+              <paper-icon-button id="openandela" icon="my-icons:slack" on-click="_tappedOpenAndelaSlack">
+              </paper-icon-button>
               <paper-tooltip for="openandela">Join OpenAndela Slack</paper-tooltip>
             </a>
           </app-toolbar>
@@ -196,7 +197,7 @@
         <iron-pages id="pages" selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
           <home-page name="home"></home-page>
           <modules-page name="modules" route="[[subroute]]" ahs="[[ahsContent]]" python$="{{pyChecked}}"></modules-page>
-          <my-view404 name="view404"></my-view404>
+          <ahs-view404 name="view404"></ahs-view404>
         </iron-pages>
 
         <!-- <paper-icon-button id="main-slackr" icon="my-icons:slack"></paper-icon-button> -->
@@ -273,6 +274,8 @@
         if (!this.$.drawer.persistent) {
           this.$.drawer.close();
         }
+        
+        ga('send', 'pageview', this.page);
       }
 
       _pageChanged(page) {
@@ -289,6 +292,9 @@
 
       _pyCheckedChanged() {
         this.modifyLocalStore();
+        
+        let lang = (this.pyChecked === true ? 'Python' : 'JavaScript');
+        ga('send', 'event', 'Language Switch', lang, 'UI Interaction');
       }
 
       initializeLocalStore() {
@@ -305,8 +311,19 @@
         this.localStore.usingPy = this.pyChecked;
         this.notifyPath('localStore.usingPy');
       }
-    }
+      
+      _tappedFeedbackLink(e) {
+        this._gaEvt('AHS Feedback', 'click', 'UI Interaction');
+      }
 
+      _tappedOpenAndelaSlack(e) {
+        this._gaEvt('OpenAndelaSlack', 'click', 'UI Interaction');
+      }
+
+      _gaEvt(prop, action, label) {
+        ga('send', 'event', prop, action, label);
+      }
+    }
     window.customElements.define(AndelaHomeStudy.is, AndelaHomeStudy);
   </script>
 </dom-module>
