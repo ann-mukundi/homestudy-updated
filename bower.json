@@ -21,7 +21,11 @@
     "iron-list": "^2.0.0",
     "prism-element": "^2.0.0",
     "paper-toggle-button": "^2.0.0",
-    "iron-localstorage": "^2.0.0"
+    "iron-localstorage": "^2.0.0",
+    "paper-item": "^2.0.0",
+    "paper-listbox": "^2.0.0",
+    "paper-menu-button": "^2.0.0",
+    "paper-fab": "^2.0.0"
   },
   "resolutions": {
     "polymer": "^2.0.0"

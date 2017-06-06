@@ -34,4 +34,4 @@ This is an example of **procedural abstraction**. We do not necessarily know how
 Figure 1: Procedural Abstraction
 
 [1]: http://interactivepython.org#fig-procabstraction
-[2]: ../../src/modules/images/blackbox.png
+[2]: ../../homestudy/src/modules/images/blackbox.png

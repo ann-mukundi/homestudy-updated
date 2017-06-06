@@ -6,6 +6,7 @@
     <meta name="description" content="Andela Home Study App">
 
     <base href="./">
+
     <link rel="icon" href="images/favicon.ico">
     <link rel="manifest" href="manifest.json">
 
@@ -34,8 +35,9 @@
 
     <script>
       // Register the base URL
-      // Load and register pre-caching Service Worker
       const baseUrl = document.querySelector('base').href;
+
+      // Load and register pre-caching Service Worker
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register(baseUrl + 'service-worker.js');
@@ -44,10 +46,10 @@
     </script>
     <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <!-- Load AHS PWA app shell -->
+    <!-- Load AHS shell -->
     <link rel="import" href="src/andela-homestudy.html">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en);
       body {
         margin: 0;
         font-family: 'Roboto', 'Noto', sans-serif;

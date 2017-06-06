@@ -1,5 +1,5 @@
 
-[Source](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html "Permalink to 5.7. The Bubble Sort — Problem Solving with Algorithms and Data Structures")
+[Source - http://interactivepython.org](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html "Permalink to 5.7. The Bubble Sort — Problem Solving with Algorithms and Data Structures")
 
 # 5.7. The Bubble Sort — Problem Solving with Algorithms and Data Structures
 

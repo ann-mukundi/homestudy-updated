@@ -1,5 +1,5 @@
 
-[Source](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheSelectionSort.html "Permalink to 5.8. The Selection Sort — Problem Solving with Algorithms and Data Structures")
+[Source - http://interactivepython.org](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheSelectionSort.html "Permalink to 5.8. The Selection Sort — Problem Solving with Algorithms and Data Structures")
 
 # 5.8. The Selection Sort — Problem Solving with Algorithms and Data Structures
 

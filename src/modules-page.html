@@ -2,6 +2,14 @@
 <link rel="import" href="../bower_components/iron-list/iron-list.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="my-icons.html">
+
 <link rel="import" href="shared-styles.html">
 <link rel="import" href="md-styles.html">
 <link rel="import" href="highlight-styles.html">
@@ -97,11 +105,23 @@
       <template is="dom-if" if="{{asResource}}">
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--12-col">
-             <h1>
-              <div class="circle">{{moduleIndex}}</div>
-              {{content.name}}
+            <h1 class="title-root">
+              <paper-menu-button>
+                <paper-fab slot="dropdown-trigger" label="{{moduleIndex}}" alt="menu"></paper-fab>
+                <paper-listbox slot="dropdown-content">
+                  <template is="dom-repeat" items="{{contentLinks}}" as="res">
+                    <paper-item>
+                      <a lang$="[[res.lang]]" name="resource" href="modules/[[pathIndex]]/[[res.name]]">[[res.title]]</a>
+                    </paper-item>
+                  </template>
+                </paper-listbox>
+              </paper-menu-button>
+              <a href="modules/[[pathIndex]]">{{content.name}}</a>
             </h1>
-            <h2>[[resource.title]]</h2>
+            <h3 class="title-branch">
+              <iron-icon icon="my-icons:subdirectory-arrow-right"></iron-icon>
+              <span>[[resource.title]]</span>
+            </h3>
 
             <marked-element breaks="" sanitize="" smartypants="" on-syntax-highlight="_highlightSyntax">
               <div slot="markdown-html"></div>
@@ -116,6 +136,10 @@
   <script>
     class ModulesPage extends Polymer.Element {
       static get is() { return 'modules-page'; }
+
+      constructor() {
+        super();
+      }
 
       static get properties() {
         return {
