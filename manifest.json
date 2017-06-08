@@ -3,7 +3,7 @@
   "short_name": "Home Study",
   "start_url": "./?homescreen=1",
   "display": "standalone",
-  "theme_color": "#3f51b5",
+  "theme_color": "#3260DA",
   "background_color": "#ffffff",
   "icons": [
     {

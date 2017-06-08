@@ -40,7 +40,9 @@
       // Load and register pre-caching Service Worker
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+          if('https:' === window.location.protocol){
+            navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+          }
         });
       }
     </script>
@@ -80,6 +82,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      window.ga = ga;
       ga('create', 'UA-54977360-7', 'auto');
     </script>
     <noscript>

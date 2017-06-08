@@ -15,7 +15,7 @@
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
 <link rel="import" href="../bower_components/paper-toggle-button/paper-toggle-button.html">
-
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="home-page.html">
@@ -24,14 +24,14 @@
 
 <dom-module id="andela-homestudy">
   <template>
-    <style>
+    <style include="shared-styles">
       :host {
         --app-primary-color: #3F51B5;
         --app-secondary-color: black;
         --app-primary-color-lite: #4285f4;
         --app-andela-logo-blue: #3260DA;
-        --paper-fab-background: #ddd;
-        --paper-fab-keyboard-focus-background: #ddd;
+        --paper-fab-background: #bbb;
+        --paper-fab-keyboard-focus-background: #bbb;
 
         display: block;
       }
@@ -40,6 +40,10 @@
         --paper-toggle-button-unchecked-bar-color: #fff;
         --paper-toggle-button-checked-bar-color : #FFD845;
         --paper-toggle-button-checked-button-color : #FFD845;
+      }
+
+      :host app-header paper-progress{
+        width: 100%;
       }
 
       app-drawer-layout:not([narrow]) [drawer-toggle] {
@@ -108,6 +112,10 @@
         transition: opacity 1s ease-in-out;
       }
 
+      [main-title] .title-span a{
+        text-decoration: none;
+      }
+
       @media (max-width: 550px) {
         [main-title] .title-span{
           display: none;
@@ -126,6 +134,11 @@
         -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
         flex-shrink: 0;
+      }
+
+      #openandela {
+        background: #fff;
+        border-radius: 50%;
       }
 
       #main-slackr{
@@ -148,7 +161,7 @@
     <app-drawer-layout force-narrow="">
       <!-- Drawer content -->
       <app-drawer id="drawer" slot="drawer">
-        <app-toolbar>Structure</app-toolbar>
+        <app-toolbar>Navigation</app-toolbar>
         <iron-ajax url="src/modules/modules.json" last-response="{{ahsContent}}" auto=""></iron-ajax>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="home" href="home">Welcome</a>
@@ -166,16 +179,22 @@
             <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
             <div main-title="">
               <span class="span-logo">
-                <img src="images/andela-logo.png" alt="">
+                <a name="home" href="home">
+                  <img src="images/andela-logo.png" alt="">
+                </a>
               </span>
               <span class="title-span">
-                Andela Home Study
+                <a name="home" href="home">
+                  Andela Home Study
+                </a>
               </span>
             </div>
 
             <paper-icon-button hidden$="[[pageIsHome]]" id="py" icon="my-icons:js"></paper-icon-button>
+            <paper-tooltip for="py">Prioritize Python Content</paper-tooltip>
             <paper-toggle-button hidden$="[[pageIsHome]]" checked="{{pyChecked::change}}"></paper-toggle-button>
             <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:py"></paper-icon-button>
+            <paper-tooltip for="js">Prioritize JavaScript Content</paper-tooltip>
 
             <a href="http://goo.gl/forms/Tg3YrHvXzV" target="_blank" tabindex="-1">
               <paper-icon-button id="feedback" icon="my-icons:feedback" on-click="_tappedFeedbackLink">
@@ -186,10 +205,11 @@
             <a href="https://open-andela.slack.com" target="_blank" tabindex="-1">
               <paper-icon-button id="openandela" icon="my-icons:slack" on-click="_tappedOpenAndelaSlack">
               </paper-icon-button>
-              <paper-tooltip for="openandela">Join OpenAndela Slack</paper-tooltip>
+              <paper-tooltip position="left" for="openandela">Join OpenAndela Slack</paper-tooltip>
             </a>
           </app-toolbar>
 
+          <!-- <paper-progress indeterminate></paper-progress> -->
         </app-header>
 
         <div class="ribbons"></div>
@@ -205,6 +225,9 @@
       </app-header-layout>
     </app-drawer-layout>
   </template>
+  
+  <script src="../bower_components/web-animations-js/web-animations.min.js"></script>
+  <script src="../bower_components/web-animations-js/web-animations-next-lite.min.js"></script>
 
   <script>
     class AndelaHomeStudy extends Polymer.Element {
