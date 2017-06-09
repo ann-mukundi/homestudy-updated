@@ -121,7 +121,7 @@
               <span>[[resource.title]]</span>
             </h3>
 
-            <marked-element breaks="" sanitize="" smartypants="" on-syntax-highlight="_highlightSyntax">
+            <marked-element breaks="" sanitize="" smartypants="" on-render="_renderStart" on-marked-render-complete="_renderDone" on-syntax-highlight="_highlightSyntax">
               <div slot="markdown-html"></div>
               <script type="text/markdown" src="src/modules/[[pathIndex]]/[[resource.name]].md"></script>
             </marked-element>
@@ -232,6 +232,14 @@
         }
 
         ga('send', 'pageview', `${this.rootPattern}modules/${path}`);
+      }
+
+      _renderStart() {
+
+      }
+
+      _renderdone() {
+        
       }
 
     }
