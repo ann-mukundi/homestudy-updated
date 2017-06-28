@@ -89,7 +89,7 @@
                       <template is="dom-repeat" items="{{contentLinks}}" as="res">
                           <li>
                             <!-- <a lang$="[[res.lang]]" name="resource" href="modules/[[pathIndex]]/[[res.name]]">[[res.title]]</a> -->
-                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]" target="_blank">[[res.title]]</a>
+                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]" on-click="_resourceLinkClicked" target="_blank">[[res.title]]</a>
                           </li>
                       </template>
                     </ul>
@@ -172,6 +172,10 @@
             value: false,
             reflectToAttribute: true
           },
+          pageViewRecorded: {
+            type: Boolean,
+            value: false
+          },
           routeData: Object,
           subrouteData: Object
         };
@@ -232,7 +236,28 @@
           }
         }
 
-        ga('send', 'pageview', `${this.rootPattern}modules/${path}`);
+        //ga('send', 'pageview', `${this.rootPattern}modules/${path}`);
+      }
+
+      _gaEvt(prop, action, label) {
+        if(this.pageViewRecorded === false){
+          let pageView = `${this.rootPattern}modules/${path}`;
+          this._gaPageView(pageView);
+        }
+        ga('send', 'event', prop, action, label, {
+          hitCallback: function() {}
+        })
+      }
+
+      _gaPageView(page){
+        ga('send', 'pageview', page);
+        this.pageViewRecorded = true;
+      }
+
+      _resourceLinkClicked(e) {
+        let text = e.path[0].innerText;
+        let host =  e.path[0].hostname;
+        this._gaEvt(text, host, "Resource Click");
       }
 
       _renderStart() {

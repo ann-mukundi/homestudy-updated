@@ -254,6 +254,10 @@
             type: Boolean,
             value: true
           },
+          pageViewRecorded: {
+            type: Boolean,
+            value: false
+          },
           routeData: Object,
           rootPattern: String,
           moduleRoute: String
@@ -262,7 +266,7 @@
 
       static get observers() {
         return [
-          '_routePageChanged(routeData.page)',
+          '_routePageChanged(routeData)',
         ];
       }
 
@@ -277,14 +281,14 @@
         super.connectedCallback();
       }
 
-      _routePageChanged(page) {
+      _routePageChanged(data) {
         // Polymer 2.0 will call with `undefined` on initialization.
         // Ignore until we are properly called with a string.
-        if (page === undefined) {
+        if (data.page === undefined) {
           return;
         }
 
-        this.page = page || 'home';
+        this.page = data.page || 'home';
 
         if(this.page === 'home'){
           this.pageIsHome = true;
@@ -298,7 +302,8 @@
           this.$.drawer.close();
         }
         
-        ga('send', 'pageview', this.page);
+        let pageView = `${this.page}${this.subroute.path}`;
+        this._gaPageView(pageView);
       }
 
       _pageChanged(page) {
@@ -317,7 +322,7 @@
         this.modifyLocalStore();
         
         let lang = (this.pyChecked === true ? 'Python' : 'JavaScript');
-        ga('send', 'event', 'Language Switch', lang, 'UI Interaction');
+        this._gaEvt('Language Switch', lang, 'UI Interaction');
       }
 
       initializeLocalStore() {
@@ -344,7 +349,20 @@
       }
 
       _gaEvt(prop, action, label) {
-        ga('send', 'event', prop, action, label);
+        console.log("andela-homestudy:_gaEvt", prop, action, label);
+        if(this.pageViewRecorded === false){
+          let pageView = `${this.page}${this.subroute.path}`;
+          this._gaPageView(pageView);
+        }
+        ga('send', 'event', prop, action, label, {
+          hitCallback: function() {}
+        })
+      }
+
+      _gaPageView(page){
+        console.log("andela-homestudy:_gaPageView", page);
+        ga('send', 'pageview', page);
+        this.pageViewRecorded = true;
       }
     }
     window.customElements.define(AndelaHomeStudy.is, AndelaHomeStudy);

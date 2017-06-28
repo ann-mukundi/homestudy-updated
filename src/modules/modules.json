@@ -448,10 +448,12 @@
       "lang": "js",
       "coverage": "3",
       "name": "codecademy-js-course--js",
-      "title": "Codecademy JavaScript Course"
+      "title": "Codecademy JavaScript Course",
+      "link": "https://www.codecademy.com/learn/learn-javascript"
     }, {
       "coverage": "4",
       "name": "mvc-explained-with-legos",
-      "title": "Model-View-Controller (MVC) Explained"
+      "title": "Model-View-Controller (MVC) Explained",
+      "link": "https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/"
     }]
  }]
