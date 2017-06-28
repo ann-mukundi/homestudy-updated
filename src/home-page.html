@@ -126,11 +126,8 @@
       }
 
       _gaEvt(prop, action, label) {
-        console.log("home-page:_gaEvt", prop, action, label);
         ga('send', 'event', prop, action, label, {
-          hitCallback: function() {
-            console.log(`DONE ${label} for ${action} on ${prop}`)
-          }
+          hitCallback: function() {}
         });
       }
     }

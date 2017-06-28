@@ -349,7 +349,6 @@
       }
 
       _gaEvt(prop, action, label) {
-        console.log("andela-homestudy:_gaEvt", prop, action, label);
         if(this.pageViewRecorded === false){
           let pageView = `${this.page}${this.subroute.path}`;
           this._gaPageView(pageView);
@@ -360,7 +359,6 @@
       }
 
       _gaPageView(page){
-        console.log("andela-homestudy:_gaPageView", page);
         ga('send', 'pageview', page);
         this.pageViewRecorded = true;
       }

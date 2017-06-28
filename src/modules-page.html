@@ -241,7 +241,7 @@
 
       _gaEvt(prop, action, label) {
         if(this.pageViewRecorded === false){
-          let pageView = `${this.rootPattern}modules/${path}`;
+          let pageView = `${this.rootPattern}modules/${this.route.path}`;
           this._gaPageView(pageView);
         }
         ga('send', 'event', prop, action, label, {
