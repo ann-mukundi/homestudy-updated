@@ -141,6 +141,10 @@
         border-radius: 50%;
       }
 
+      #openandela-wrap{
+        margin-left: 0.5em;
+      }
+
       #main-slackr{
         position: fixed;
         display: block;
@@ -190,19 +194,19 @@
               </span>
             </div>
 
-            <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:js"></paper-icon-button>
+            <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:js" on-click="_switchToJavaScript"></paper-icon-button>
             <paper-tooltip for="js">Prioritize JavaScript Content</paper-tooltip>
             <paper-toggle-button hidden$="[[pageIsHome]]" checked="{{pyChecked::change}}"></paper-toggle-button>
-            <paper-icon-button hidden$="[[pageIsHome]]" id="py" icon="my-icons:py"></paper-icon-button>
+            <paper-icon-button hidden$="[[pageIsHome]]" id="py" icon="my-icons:py" on-click="_switchToPython"></paper-icon-button>
             <paper-tooltip for="py">Prioritize Python Content</paper-tooltip>
 
             <a href="http://goo.gl/forms/Tg3YrHvXzV" target="_blank" tabindex="-1">
-              <paper-icon-button id="feedback" icon="my-icons:feedback" on-click="_tappedFeedbackLink">
+              <paper-icon-button id="feedback" icon="my-icons:chat" on-click="_tappedFeedbackLink">
               </paper-icon-button>
               <paper-tooltip for="feedback">Provide Feedback</paper-tooltip>
             </a>
 
-            <a href="https://open-andela.slack.com" target="_blank" tabindex="-1">
+            <a href="https://open-andela.slack.com" target="_blank" tabindex="-1" id="openandela-wrap">
               <paper-icon-button id="openandela" icon="my-icons:slack" on-click="_tappedOpenAndelaSlack">
               </paper-icon-button>
               <paper-tooltip position="left" for="openandela">Join OpenAndela Slack</paper-tooltip>
@@ -316,6 +320,16 @@
 
       _showPage404() {
         this.page = 'ahs-view404';
+      }
+
+      _switchToPython() {
+        this.pyChecked = true;
+        this._pyCheckedChanged();
+      }
+
+      _switchToJavaScript() {
+        this.pyChecked = false;
+        this._pyCheckedChanged();
       }
 
       _pyCheckedChanged() {
