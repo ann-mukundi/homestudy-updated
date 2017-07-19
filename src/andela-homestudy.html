@@ -190,11 +190,11 @@
               </span>
             </div>
 
-            <paper-icon-button hidden$="[[pageIsHome]]" id="py" icon="my-icons:js"></paper-icon-button>
-            <paper-tooltip for="py">Prioritize Python Content</paper-tooltip>
-            <paper-toggle-button hidden$="[[pageIsHome]]" checked="{{pyChecked::change}}"></paper-toggle-button>
-            <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:py"></paper-icon-button>
+            <paper-icon-button hidden$="[[pageIsHome]]" id="js" icon="my-icons:js"></paper-icon-button>
             <paper-tooltip for="js">Prioritize JavaScript Content</paper-tooltip>
+            <paper-toggle-button hidden$="[[pageIsHome]]" checked="{{pyChecked::change}}"></paper-toggle-button>
+            <paper-icon-button hidden$="[[pageIsHome]]" id="py" icon="my-icons:py"></paper-icon-button>
+            <paper-tooltip for="py">Prioritize Python Content</paper-tooltip>
 
             <a href="http://goo.gl/forms/Tg3YrHvXzV" target="_blank" tabindex="-1">
               <paper-icon-button id="feedback" icon="my-icons:feedback" on-click="_tappedFeedbackLink">
