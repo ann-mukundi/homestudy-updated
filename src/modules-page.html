@@ -1,3 +1,4 @@
+
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/iron-list/iron-list.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
@@ -26,6 +27,15 @@
         margin: 20px;
       }
 
+      #studyres{
+        margin: 0;
+      }
+
+      #studyres li {
+        width: inherit;
+        white-space: normal;
+      }
+
       #studyres [lang]{
         opacity: 1;
         visibility: visible;
@@ -41,10 +51,17 @@
     </style>
     <style include="md-styles"></style>
 
-    <app-route route="[[route]]" pattern="/:module" data="{{routeData}}" tail="{{subroute}}">
+    <app-route
+      route="[[route]]"
+      pattern="/:module"
+      data={{routeData}}
+      tail="{{subroute}}">
     </app-route>
 
-    <app-route route="{{subroute}}" pattern="/:resource" data="{{subrouteData}}">
+    <app-route
+        route="{{subroute}}"
+        pattern="/:resource"
+        data="{{subrouteData}}">
     </app-route>
 
     <div class="page"> 
@@ -66,7 +83,7 @@
               <h3>Learning Objectives</h3>
               <p>By the end of this module, you should be able to understand:</p>
               <ol>
-                <template is="dom-repeat" items="{{content.objectives}}">
+                <template is="dom-repeat" items={{content.objectives}}>
                   <li>{{item}}</li>
                 </template>
               </ol>
@@ -122,7 +139,10 @@
               <span>[[resource.title]]</span>
             </h3>
 
-            <marked-element breaks="" sanitize="" smartypants="" on-render="_renderStart" on-marked-render-complete="_renderDone" on-syntax-highlight="_highlightSyntax">
+            <marked-element breaks sanitize smartypants 
+              on-render="_renderStart"
+              on-marked-render-complete="_renderDone"
+              on-syntax-highlight="_highlightSyntax">
               <div slot="markdown-html"></div>
               <script type="text/markdown" src="src/modules/[[pathIndex]]/[[resource.name]].md"></script>
             </marked-element>
