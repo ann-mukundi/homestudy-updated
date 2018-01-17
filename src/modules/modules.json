@@ -1,29 +1,14 @@
 [
   {
-    "name": "Intro to Computer Science",
-    "overview":
-      "In this module, we will introduce basic computer science concepts. We will cover all the areas required to get you to the point of understanding what a computer scientist does.",
-    "objectives": [
-      "What computer science is.",
-      "What a computer scientist does.",
-      "Basic computer science vocabulary.",
-      "The core concepts in computer science."
-    ],
-    "content": [
-      {
-        "coverage": "1",
-        "name": "what-is-csc",
-        "title": "What is Computer Science",
-        "link":
-          "http://interactivepython.org/courselib/static/pythonds/Introduction/WhatIsComputerScience.html"
-      },
-      {
-        "coverage": "3, 4",
-        "name": "key-csc-concepts",
-        "link": "http://carlcheo.com/compsci",
-        "title": "40 key Computer Science Concepts Explained in Layman Terms"
-      }
-    ]
+    "name": "Understanding Andela’s EPIC Values",
+    "overview": "At Andela, our values can be sumarized as EPIC - Excellence, Passion, Integrity, and Collaboration. This module covers the fundamental principles of being EPIC. ",
+    "objectives": ["At the end of this module, you will understand the Andela principles behind Excellence, Passion, Integrity and Collaboration"],
+    "content":[{
+      "name": "understanding-andela-epic-values",
+      "title": "Understanding Andela’s EPIC Values",
+      "link":
+        "https://docs.google.com/document/d/1Cb1YLA19BEQh2v0yLYtCsZ1Uz352Sa_f-vNZzgzKiYI/"
+    }]
   },
   {
     "name": "Introduction to Programming",
@@ -119,6 +104,17 @@
           "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks"
       }
     ]
+  },
+  {
+    "name": "Git and Version Control",
+    "overview": "",
+    "objectives": [""],
+    "content":[{
+      "name": "",
+      "title": "",
+      "link":
+        ""
+    }]
   },
   {
     "name": "Object Oriented Programming",
@@ -292,252 +288,37 @@
     ]
   },
   {
-    "name": "Recursion",
-    "overview":
-      "Recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem. We have seen that functions are named procedures which perform distinct tasks or services. This module will address recursion as a technique involving the use of functions.",
-    "objectives": [
-      "What recursion is about.",
-      "Types of recursion.",
-      "Recursive functions.",
-      "When to use recursive functions.",
-      "Advantages and disadvantages of recursion.",
-      "Difference between recursion and iteration.",
-      "How recursive functions in Python / JavaScript are written."
-    ],
-    "content": [
-      {
-        "coverage": "1, 7",
-        "name": "intro-to-recursion",
-        "title": "An Introduction to Recursion",
-        "link":
-          "https://www.topcoder.com/community/data-science/data-science-tutorials/an-introduction-to-recursion-part-1/"
-      },
-      {
-        "coverage": "1, 7",
-        "name": "multiple-related-decisions",
-        "title": "Multiple Related Decisions",
-        "link":
-          "https://www.topcoder.com/community/data-science/data-science-tutorials/an-introduction-to-recursion-part-2/"
-      },
-      {
-        "coverage": "2",
-        "name": "recursion-applicative-programming",
-        "title": "Recursion and Applicative Programming",
-        "link":
-          "http://courses.cs.washington.edu/courses/cse341/03wi/scheme/recursion.html "
-      },
-      {
-        "coverage": "3, 4",
-        "name": "recursive-functions",
-        "title": "Recursive Functions",
-        "link": "http://pages.cs.wisc.edu/~calvin/cs110/RECURSION.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "3, 5",
-        "name": "py-recursion--py",
-        "title": "Python Recursion",
-        "link": "https://www.programiz.com/python-programming/recursion"
-      },
-      {
-        "lang": "js",
-        "coverage": "3, 5",
-        "name": "js-recursion--js",
-        "title": "Understanding Recursion in JavaScript",
-        "link": "http://www.integralist.co.uk/posts/js-recursion.html"
-      },
-      {
-        "coverage": "6",
-        "name": "iteration-vs-recursion",
-        "title": "Iteration vs Recursion",
-        "link": "http://www2.hawaii.edu/~tp_200/lectureNotes/recursion.htm"
-      }
-    ]
+    "name": "Test Driven Development",
+    "overview": "",
+    "objectives": [""],
+    "content":[{
+      "name": "",
+      "title": "",
+      "link":
+        ""
+    }]
   },
   {
-    "name": "Sorting and Searching",
-    "overview":
-      "In this module, we will introduce algorithms for sorting and searching.",
-    "objectives": [
-      "The importance of sorting and searching in computer science.",
-      "Different sorting and searching algorithms.",
-      "Implement sorting and searching techniques in Python / JavaScript."
-    ],
-    "content": [
-      {
-        "coverage": "1,2",
-        "name": "sorting-n-searching",
-        "title": "Searching and Sorting",
-        "link":
-          "http://spector.io/computer-science-fundamentals-searching-and-sorting/"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-sorting-searching-algol-analysis--py",
-        "title": "Python Searching and Sorting",
-        "link":
-          "http://python-textbok.readthedocs.io/en/latest/Sorting_and_Searching_Algorithms.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-bubble-sort--py",
-        "title": "Python - The Bubble Sort",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-insertion-sort--py",
-        "title": "Python - The Insertion Sort",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/SortSearch/TheInsertionSort.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-selection-sort--py",
-        "title": "Python - The Selection Sort",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/SortSearch/TheSelectionSort.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-merge-sort--py",
-        "title": "Python - The Merge Sort",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/SortSearch/TheMergeSort.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-quick-sort--py",
-        "title": "Python - The Quick Sort",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "2, 3",
-        "name": "py-binary-search--py",
-        "title": "Python - The Binary Search",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html"
-      },
-      {
-        "lang": "py",
-        "coverage": "3",
-        "name": "py-sorting-alogols-impl--py",
-        "title": "Basic Sorting Algorithms Implemented in Python",
-        "link":
-          "http://danishmujeeb.com/blog/2014/01/basic-sorting-algorithms-implemented-in-python/"
-      },
-      {
-        "lang": "js",
-        "coverage": "2, 3",
-        "name": "js-sorting-alogols-in-js--js",
-        "title": "Sorting Algorithms in JavaScript",
-        "link":
-          "https://github.com/benoitvallon/computer-science-in-javascript/blob/master/sorting-algorithms-in-javascript/README.md"
-      },
-      {
-        "lang": "js",
-        "coverage": "2, 3",
-        "name": "js-sorting-alogols-series--js",
-        "title": "JavaScript Sorting Algorithms",
-        "link":
-          "http://blog.benoitvallon.com/sorting-algorithms-in-javascript/sorting-algorithms-in-javascript-all-the-code/"
-      }
-    ]
+    "name": "Databases",
+    "overview": "",
+    "objectives": [""],
+    "content":[{
+      "name": "",
+      "title": "",
+      "link":
+        ""
+    }]
   },
   {
-    "name": "Software Engineering",
-    "overview":
-      "This module will cover all the phases of software development. Starting from software requirement analysis, to design, to implementation, to testing, to deployment and finally to maintenance.",
-    "objectives": [
-      "What software engineering is about.",
-      "What a computer software engineer does.",
-      "The two main branches of software engineering.",
-      "The software development life cycle.",
-      "The different software development paradigms."
-    ],
-    "content": [
-      {
-        "coverage": "1",
-        "name": "software-eng-everview",
-        "title": "Software Engineering Overview",
-        "link":
-          "http://www.tutorialspoint.com/software_engineering/software_engineering_overview.htm"
-      },
-      {
-        "coverage": "2, 3",
-        "name": "what-a-software-eng-does",
-        "title": "What Does A Computer Software Engineer Do?",
-        "link":
-          "http://tryengineering.org/ask-expert/what-does-computer-software-engineer-do-could-you-give-me-description-field"
-      },
-      {
-        "coverage": "4, 5",
-        "name": "software-dlc",
-        "title": "Software Development Life Cycle Overview",
-        "link": "http://www.tutorialspoint.com/sdlc/sdlc_quick_guide.htm"
-      }
-    ]
-  },
-  {
-    "name": "The Internet",
-    "overview":
-      "In this module, we will cover what the internet is and how it works.",
-    "objectives": [
-      "What the internet is.",
-      "How the internet works.",
-      "Basic internet tools or concepts.",
-      "Networking.",
-      "The World Wide Web."
-    ],
-    "content": [
-      {
-        "coverage": "1, 3",
-        "name": "what-is-the-internet",
-        "title": "What is The Internet",
-        "link": "https://www.computerhope.com/jargon/i/internet.htm"
-      },
-      {
-        "coverage": "2, 3",
-        "name": "how-the-internet-works",
-        "title": "How The Internet Works",
-        "link":
-          "https://blog.hubspot.com/marketing/how-the-internet-works#sm.0000i8dcdo167uepfr7g8tvppgibd"
-      },
-      {
-        "coverage": "2, 3",
-        "name": "simple-how-the-internet-works",
-        "title": "How The Internet Works (Simpler)",
-        "link": "http://adrianland.uk/howto/how-does-the-internet-work/"
-      },
-      {
-        "coverage": "3",
-        "name": "what-is-email",
-        "title": "What Is Email",
-        "link":
-          "http://searchexchange.techtarget.com/definition/e-mail-electronic-mail-or-email"
-      },
-      {
-        "coverage": "4",
-        "name": "computer-networks",
-        "title": "Introduction to Computer Networks",
-        "link": "http://www.ohio.edu/people/piccard/mis300/netintro.htm"
-      },
-      {
-        "coverage": "5",
-        "name": "how-www-works",
-        "title": "How The World Wide Web Works",
-        "link": "http://www.explainthatstuff.com/howthewebworks.html"
-      }
-    ]
+    "name": "Project Management Tools",
+    "overview": "",
+    "objectives": [""],
+    "content":[{
+      "name": "",
+      "title": "",
+      "link":
+        ""
+    }]
   },
   {
     "name": "Web Programming",
@@ -598,14 +379,14 @@
     ]
   },
   {
-    "name": "Understanding Andela’s EPIC Values",
-    "overview": "At Andela, our values can be sumarized as EPIC - Excellence, Passion, Integrity, and Collaboration. This module covers the fundamental principles of being EPIC. ",
-    "objectives": ["At the end of this module, you will understand the Andela principles behind Excellence, Passion, Integrity and Collaboration"],
+    "name": "Introduction to Javascript",
+    "overview": "",
+    "objectives": [""],
     "content":[{
-      "name": "understanding-andela-epic-values",
-      "title": "Understanding Andela’s EPIC Values",
+      "name": "",
+      "title": "",
       "link":
-        "https://docs.google.com/document/d/1Cb1YLA19BEQh2v0yLYtCsZ1Uz352Sa_f-vNZzgzKiYI/"
+        ""
     }]
   }
 ]
