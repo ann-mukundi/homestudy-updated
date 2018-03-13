@@ -86,9 +86,9 @@
                 <template is="dom-repeat" items={{content.objectives}}>
                   <li>{{item}}</li>
                 </template>
-              </ol>
+              </ol>    
             </template>
-            
+
           </div>
           <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
             <table class="full-width module-map mdl-data-table mdl-js-data-table mdl-shadow--3dp">
@@ -104,9 +104,8 @@
                   <td class="mdl-data-table__cell--non-numeric module-resources">
                     <ul id="studyres">
                       <template is="dom-repeat" items="{{contentLinks}}" as="res">
-                          <li>
-                            <!-- <a lang$="[[res.lang]]" name="resource" href="modules/[[pathIndex]]/[[res.name]]">[[res.title]]</a> -->
-                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]" on-click="_resourceLinkClicked" target="_blank">[[res.title]]</a>
+                          <li>                                                                      
+                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]"  data-source$=[[res.source]]   data-module$="{{moduleIndex}}" data-file$="[[res.title]]" on-click="_resourceLinkClicked">[[res.title]]</a>
                           </li>
                       </template>
                     </ul>
@@ -255,8 +254,7 @@
             this.resource = this.content.content.find(itm => itm.name === pathParts[1]);
           }
         }
-
-        //ga('send', 'pageview', `${this.rootPattern}modules/${path}`);
+          
       }
 
       _gaEvt(prop, action, label) {
@@ -275,9 +273,23 @@
       }
 
       _resourceLinkClicked(e) {
+       //  e.preventDefault();
         let text = e.path[0].innerText;
         let host =  e.path[0].hostname;
+        let module =  e.path[0].dataset.module;
+        let source =  e.path[0].dataset.source
+        let file =  e.path[0].dataset.file
+        let module_id = module - 1
+
+        if( source === 'andela'){
+          host = "content/"+ module_id + "/" + file;
+        }
+
+        console.log(host, text)
+
         this._gaEvt(text, host, "Resource Click");
+        // window.location.href = host;
+        
       }
 
       _renderStart() {
@@ -289,7 +301,7 @@
       }
 
     }
-
+    
     window.customElements.define(ModulesPage.is, ModulesPage);
   </script>
 </dom-module>

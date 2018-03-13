@@ -21,6 +21,7 @@
 <link rel="lazy-import" href="home-page.html">
 <link rel="lazy-import" href="modules-page.html">
 <link rel="lazy-import" href="ahs-view404.html">
+<link rel="lazy-import" href="content-page.html">
 
 <dom-module id="andela-homestudy">
   <template>
@@ -154,10 +155,14 @@
         margin-bottom: 40px;
         z-index: 900;
       }
-    </style>
+    </style>    
 
-    <app-location route="{{route}}"></app-location>
-    <app-route route="{{route}}" pattern="[[rootPattern]]:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+    <app-location route="{{route}}"  ></app-location>
+    <app-route
+            route="{{route}}"
+            pattern="[[rootPattern]]:page"
+            data="{{routeData}}"
+            tail="{{subroute}}"></app-route>
 
     <iron-localstorage name="ahs-app-storage" value="{{localStore}}" on-iron-localstorage-load="LocalStoreLoaded" on-iron-localstorage-load-empty="initializeLocalStore">
     </iron-localstorage>
@@ -218,9 +223,10 @@
 
         <div class="ribbons"></div>
 
-        <iron-pages id="pages" selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
+        <iron-pages id="pages" selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main" >
           <home-page name="home"></home-page>
           <modules-page name="modules" route="[[subroute]]" ahs="[[ahsContent]]" python$="{{pyChecked}}"></modules-page>
+          <content-page name="content" route="[[subroute]]" ahs="[[ahsContent]]" python$="{{pyChecked}}"></content-page>
           <ahs-view404 name="view404"></ahs-view404>
         </iron-pages>
 
