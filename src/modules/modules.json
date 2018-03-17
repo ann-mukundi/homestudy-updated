@@ -89,31 +89,22 @@
     "name": "Git and Version Control",
     "overview": "Version control is a way of keeping track of changes to files over time so that you can recall previous versions when needed and also easily work with other teammates collaboratively",
     "objectives": [
+      "Basic commands that can be executed via the terminal",
       "What version control is and why it is important",
       "Know examples of version control systems",
       "How to use common git commands"
       ],
     "content":[
       {
-        "name": "what-is-version-control",
-        "title": "What is version Control",
-        "link":"https://www.atlassian.com/git/tutorials/what-is-version-control"
+        "name": "command-line",
+        "title": "Command Line Basics",
+        "link": "content/3/command-line"
       },
       {
-        "name": "join-github",
-        "title": "Join Github",
-        "link":"https://github.com/join?source=header-home"
-      },
-      {
-      "name": "install-git",
-      "title": "Installing Git",
-      "link":"https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
-    },
-    {
-      "name": "get-started-with-git",
-      "title": "Getting Started With Git",
-      "link":"https://try.github.io/levels/1/challenges/1"
-    }]
+        "name": "version-control",
+        "title": "Version control with Git",
+        "link": "content/3/version-control"
+      }]
   },
   {
     "name": "Communication",
