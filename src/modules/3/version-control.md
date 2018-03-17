@@ -5,7 +5,7 @@ Version control is a way of keeping track of changes to files over time so that 
 | What will I know by the end of this skill?   |      Resources      |
 |:-------------|:------------------|
 | * What version control is and why it is important| https://www.atlassian.com/git/tutorials/what-is-version-control |
-| * Common gut commands|https://try.github.io/levels/1/challenges/1|
+| * Common git commands|https://try.github.io/levels/1/challenges/1|
 | * Getting started with git| https://github.com/join?source=header-home |
 | * Git work flow | https://github.com/andela/bestpractices/wiki/Git-Workflow |
 | * Git best practices | https://github.com/andela/bestpractices/wiki/Git-naming-conventions-and-best-practices |
