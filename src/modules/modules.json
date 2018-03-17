@@ -168,76 +168,43 @@
     ]
   },
   {
-    "name": "Data Structures",
+    "name": "Data Structures & Algorithms",
     "overview":
       "A data structure is a logical concept that introduces a way to organize data so the data can be immediately available to the processor for required calculations. This module will cover ways in which data is stored for efficient search and retrieval.",
     "objectives": [
       "What data structures are.",
       "How data structures are used.",
       "The different data structure classifications.",
-      "Data structures in Python / JavaScript."
+      "Data structures in Python / JavaScript.",
+      "Principles of algorithms",
+      "Algorithm analysis"
     ],
     "content": [
       {
         "coverage": "1, 2, 3",
-        "name": "intro-data-structures",
+        "name": "data-structures",
         "title": "Introduction to Data Structures ",
-        "link":
-          "http://www.studytonight.com/data-structures/introduction-to-data-structures "
-      },
-      {
-        "coverage": "1, 2, 3",
-        "name": "why-datastructures",
-        "title": "Why Study Data Structures and Abstract Data Types?",
-        "link":
-          "http://interactivepython.org/courselib/static/pythonds/Introduction/WhyStudyDataStructuresandAbstractDataTypes.html"
-      },
-      {
-        "coverage": "1, 2, 3",
-        "name": "basic-datastructures-algols",
-        "title": "Introduction to Basic Data Structures & Algorithms",
-        "link":
-          "http://cs-fundamentals.com/data-structures/introduction-to-data-structures.php"
+        "link": "content/6/data-structures"
       },
       {
         "lang": "py",
         "coverage": "4",
-        "name": "py-builtin-datastructures--py",
-        "title": "Codecademy’s Python’s built in Data Structures ",
-        "link":
-          "https://www.codecademy.com/courses/python-s-built-in-data-structures/0/0 "
+        "name": "py-python-data-structures--py",
+        "title": "Python Data Structures ",
+        "link": "content/6/py-python-data-structures--py"
       },
       {
         "lang": "js",
         "coverage": "4",
-        "name": "js-types-and-datastructures--js",
-        "title": "JavaScript Data Types & Data Structures",
-        "link":
-          "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+        "name": "js--data-structures--js",
+        "title": "JavaScript Data Structures",
+        "link": "content/6/js--data-structures--js"
       },
       {
-        "lang": "py",
-        "coverage": "4",
-        "name": "py-data-intro--py",
-        "title": "Data Structures in Python",
-        "link":
-          "http://opentechschool.github.io/python-data-intro/core/data.html"
-      },
-      {
-        "lang": "js",
-        "coverage": "4",
-        "name": "js-data-intro--js",
-        "title": "Data Structures in JavaScript",
-        "link":
-          "http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/"
-      },
-      {
-        "lang": "py",
-        "coverage": "4",
-        "name": "py-advanced-datastructures--py",
-        "title": "Advanced Python Data Structures",
-        "link":
-          "https://code.tutsplus.com/articles/advanced-python-data-structures--net-32748"
+        "coverage": "1, 2",
+        "name": "algorithms",
+        "title": "Introduction to Algorithms",
+        "link": "content/6/algorithms"
       }
     ]
   },
