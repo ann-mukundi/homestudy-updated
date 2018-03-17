@@ -147,48 +147,23 @@
     "content": [
       {
         "coverage": "1",
-        "name": "what-is-oop",
-        "title": "What is Object Oriented Programming ",
-        "link": "http://teknadesigns.com/what-is-object-oriented-programming/"
+        "name": "oop",
+        "title": "What is Object Oriented Programming",
+        "link": "content/5/oop"
       },
       {
         "lang": "py",
         "coverage": "1, 2",
         "name": "py-oop--py",
-        "title": "Python Object Oriented Programming",
-        "link": "http://www.python-course.eu/object_oriented_programming.php"
+        "title": "Object Oriented Programming in Python",
+        "link": "content/5/py-oop--py"
       },
       {
         "lang": "js",
         "coverage": "1, 2",
         "name": "js-oop--js",
         "title": "Introducing JavaScript Objects",
-        "link":
-          "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects"
-      },
-      {
-        "lang": "py",
-        "coverage": "1, 2",
-        "name": "oop-in-py--py",
-        "title": "Object Oriented Programming in Python",
-        "link":
-          "https://code.tutsplus.com/articles/python-from-scratch-object-oriented-programming--net-21476"
-      },
-      {
-        "lang": "js",
-        "coverage": "1, 2",
-        "name": "js-classes--js",
-        "title": "JavaScript Classes",
-        "link":
-          "https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes "
-      },
-      {
-        "lang": "js",
-        "coverage": "1, 2",
-        "name": "es-classes--js",
-        "title": "A Deep Dive Into ES6 Classes",
-        "link":
-          "https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/"
+        "link": "content/5/js-oop--js"
       }
     ]
   },
@@ -205,7 +180,7 @@
     "content": [
       {
         "coverage": "1, 2, 3",
-        "name": "intro-datastructures",
+        "name": "intro-data-structures",
         "title": "Introduction to Data Structures ",
         "link":
           "http://www.studytonight.com/data-structures/introduction-to-data-structures "
