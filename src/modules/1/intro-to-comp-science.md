@@ -4,11 +4,10 @@ Aspiring Andelans can identify who a computer scientist is and what a computer s
 | What should I know by the end of this skill?   |      Resources      |
 |:-------------|:------------------|
 | - What computer science is | http://interactivepython.org/courselib/static/pythonds/Introduction/WhatIsComputerScience.html |
+| - Core Computer Science Concepts|http://carlcheo.com/compsci|
 | - The role of a computer scientist ||
 | - Applications of computer science||
 | - The differences between a programmer and a computer scientist||
-| - Core Computer Science Concepts|http://carlcheo.com/compsci|
-
 
 
 ----------

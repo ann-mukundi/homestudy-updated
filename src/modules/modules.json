@@ -49,39 +49,39 @@
     ]
   },
   {
-    "name": "Introduction to Computer Science",
+    "name": "Introduction to Programming",
     "overview": "In this module, we will introduce basic computer science concepts. We will cover all the areas required to get you to the point of understanding what a computer scientist does.",
     "objectives": [
       "What computer science is.",
-      "What a computer scientist does.",
-      " Basic computer science vocabulary.",
-      "The core concepts in computer science."
+      "The core concepts in computer science.",
+      "What programming is.",
+      "Identify basic elements in computer programming."
     ],
     "content":[{
       "name": "intro-to-comp-science",
-      "title": "Computer Science Basics",
+      "title": "Computer Science Basics ",
       "link": "content/1/intro-to-comp-science",
       "source":"andela"
-    }
-    ]
-  },
-  {
-    "name": "Introduction to Programming",
-    "overview":
-      "Computer programming is the act of writing a sequence of instructions to a computer to perform a specific task. This module will cover the basics of programming and provide an overview of computer programming.",
-    "objectives": [
-      "What programming is.",
-      "Identify basic elements in computer programming.",
-      "The Python / JavaScript programming language.",
-      "Variables, data types and control structures in Python / JavaScript.",
-      "Functions and modules in Python / JavaScript."
-    ],
-    "content": [
+    },
       {
         "coverage": "1",
         "name": "programming-basics",
         "title": "Programming Basics",
-        "link": "content/2/programming-basics"
+        "link": "content/1/programming-basics"
+      },
+      {
+        "lang": "py",
+        "coverage": "1, 2",
+        "name": "py-python-intro--py",
+        "title": "Introduction to Python",
+        "link": "content/1/py-python-intro--py"
+      },
+      {
+        "lang": "js",
+        "coverage": "1, 2",
+        "name": "js--intro--js",
+        "title": "Introduction to Javascript",
+        "link": "content/1/js--intro--js"
       }
     ]
   },
@@ -205,47 +205,6 @@
         "name": "algorithms",
         "title": "Introduction to Algorithms",
         "link": "content/6/algorithms"
-      }
-    ]
-  },
-  {
-    "name": "Algorithms",
-    "overview":
-      "Computer scientists learn by experience. We learn by seeing other people solve problems and by solving problems ourselves. Exposing us to different problem-solving techniques and seeing how algorithms are designed helps us take on challenging problems.",
-    "objectives": [
-      "The principles of algorithms.",
-      "The importance of algorithms.",
-      "Algorithm analysis.",
-      "Algorithms and how they are implemented in Python / JavaScript."
-    ],
-    "content": [
-      {
-        "coverage": "1, 2",
-        "name": "algols-from-scratch",
-        "title": "Learning Algorithms from Scratch",
-        "link":
-          "http://adrianmejia.com/blog/2011/12/22/learning-algorithms-from-scratch-algorithms-for-dummies/"
-      },
-      {
-        "coverage": "1, 2",
-        "name": "algols-for-beginners",
-        "title": "Algorithms for Beginners",
-        "link":
-          "https://medium.com/yay-its-erica/algorithms-for-beginners-bubble-sort-insertion-sort-merge-sort-29bd5506cc48"
-      },
-      {
-        "coverage": "1, 2",
-        "name": "importance-of-algols",
-        "title": "The Importance of Algorithms",
-        "link":
-          "https://www.topcoder.com/community/data-science/data-science-tutorials/the-importance-of-algorithms/"
-      },
-      {
-        "coverage": "1, 2",
-        "name": "what-is-algol-analysis",
-        "title": "What Is Algorithm Analysis?",
-        "link":
-          "http://interactivepython.org/runestone/static/pythonds/AlgorithmAnalysis/WhatIsAlgorithmAnalysis.html"
       }
     ]
   },
