@@ -200,33 +200,33 @@
         "coverage": "1, 2, 3",
         "name": "data-structures",
         "title": "Introduction to Data Structures ",
-        "link": "content/6/data-structures"
+        "link": "content/5/data-structures"
       },
       {
         "lang": "py",
         "coverage": "4",
         "name": "py-python-data-structures--py",
         "title": "Python Data Structures ",
-        "link": "content/6/py-python-data-structures--py"
+        "link": "content/5/py-python-data-structures--py"
       },
       {
         "lang": "js",
         "coverage": "4",
         "name": "js--data-structures--js",
         "title": "JavaScript Data Structures",
-        "link": "content/6/js--data-structures--js"
+        "link": "content/5/js--data-structures--js"
       },
       {
         "coverage": "1, 2",
         "name": "algorithms",
         "title": "Introduction to Algorithms",
-        "link": "content/6/algorithms"
+        "link": "content/5/algorithms"
       }
     ]
   },
   {
     "name": "Test Driven Development",
-    "overview": "TDD is a sofware develoment process in which one writes tests before writing production code thus giving one an opportunity to think through a systems requirements.",
+    "overview": "TDD is a software development process in which one writes tests before writing production code thus giving one an opportunity to think through a systems requirements.",
     "objectives": [
       "What tests are",
       "How to write tests",
@@ -234,41 +234,23 @@
       ],
     "content":[
       {
-      "name": "what-is-tdd",
-      "title": "What is TDD",
-      "link":"https://www.agilealliance.org/glossary/tdd/#q=~"
-    },
-    {
-      "name": "starting-tdd",
-      "title": "Getting Started With TDD",
-      "link":"http://agiledata.org/essays/tdd.html"
+      "name": "tdd",
+      "title": "Introduction to TDD",
+      "link": "content/6/tdd"
     },
     {
       "lang":"py",
-      "name": "py-starting-tdd-in-python--py",
-      "title": "Getting Started With TDD in Python",
-      "link":"https://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137"
+      "name": "py--tdd--py",
+      "title": "TDD in Python",
+      "link": "content/6/py--tdd--py"
     },
     {
       "lang":"js",
-      "name": "js-starting-tdd-in-js--js",
-      "title": "Getting Started With TDD in Javascript",
-      "link":"https://blog.risingstack.com/getting-node-js-testing-and-tdd-right-node-js-at-scale/"
+      "name": "js--tdd--js",
+      "title": "TDD in Javascript",
+      "link": "content/6/js--tdd--js"
     }
     ]
-  },
-  {
-    "name": "Professionalism",
-    "overview": "At Andela we act, react and communicate in a manner that demonstrates respect for our co workers, partners, ecosystem and show an acceptance of the organization's mission. We hold ourselves to the highest ethical standard.",
-    "objectives": [
-      "What Business Etiquette is",
-      "Vital rules of business etiquettes ",
-      "What Ethics is",
-      "Different types of ethical issues "
-    ],
-    "content":[
-
-     ]
   },
   {
     "name": "Databases",
@@ -279,20 +261,6 @@
       "title": "",
       "link":
         ""
-    }]
-  },
-  {
-    "name": "Project Management Tools",
-    "overview": "Project management is refers to directing and allocating available resources so as to be able to meet requirements of a project within a stipulated time.",
-    "objectives": [
-      "Project management tools available",
-      "How to create a pivotal tracker board",
-      "How to create and update stories on pivotal tracker"
-      ],
-    "content":[{
-      "name": "pivotal-tracker",
-      "title": "Getting Started With Pivotal tracker",
-      "link":"https://www.pivotaltracker.com/help/articles/quick_start/"
     }]
   },
   {
