@@ -230,7 +230,8 @@
     "objectives": [
       "What tests are",
       "How to write tests",
-      "How TDD is beneficial to programming?"
+      "How TDD beneficial is to programming",
+      "How to debug"
       ],
     "content":[
       {
@@ -249,6 +250,18 @@
       "name": "js--tdd--js",
       "title": "TDD in Javascript",
       "link": "content/6/js--tdd--js"
+    },
+    {
+      "lang":"js",
+      "name": "js--debugging--js",
+      "title": "Debugging in Javascript",
+      "link": "content/6/js--debugging--js"
+    },
+    {
+      "lang":"py",
+      "name": "py--debugging--py",
+      "title": "Debugging in Python",
+      "link": "content/6/py--debugging--py"
     }
     ]
   },

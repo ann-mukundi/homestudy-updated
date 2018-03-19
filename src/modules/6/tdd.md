@@ -1,4 +1,4 @@
-Aspiring Andelans know what tests are, how to write them, and how the TDD approach can be beneficial in development.
+Aspiring Andelans know what tests are, how to write them, and how the TDD approach can be beneficial in development. They also understand the basics of debugging, including how to replicate a problem and gradually break down the process into simpler components to isolate the root cause of the defect.
 
 
 | What should I know by the end of this skill?   |      Resources      |
