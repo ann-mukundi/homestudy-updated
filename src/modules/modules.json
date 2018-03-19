@@ -98,41 +98,57 @@
       {
         "name": "command-line",
         "title": "Command Line Basics",
-        "link": "content/3/command-line"
+        "link": "content/2/command-line"
       },
       {
         "name": "version-control",
         "title": "Version control with Git",
-        "link": "content/3/version-control"
+        "link": "content/2/version-control"
       }]
   },
   {
-    "name": "Communication",
-    "overview": "At Andela. We know that effective communication is required for use to succeed so we are willing to ask questions, seek and request feedback, write professionally, read to understand what message is being passed and speak to be understood.",
+    "name": "Winning With People",
+    "overview": "At Andela, we know that effective communication is required for use to succeed so we ask questions, request and give feedback, write professionally, speak to be understood and seek  to understand the message being passed. We act, react and communicate in a manner that demonstrates respect for our co workers, partners, ecosystem. We show an acceptance of the organization's mission and hold ourselves to the highest ethical standard",
     "objectives": [
       "Principles of effective communication",
       "Importance and benefits of seeking feedback",
-      "Approaches for constructively and effectively receiving feedback",
-      "Ways in which you can improve your writing"
+      "Approaches for constructively and effectively receiving and giving feedback",
+      "Vital rules of business etiquette",
+      "What ethics is",
+      "Project management tools"
     ],
     "content":[
       {
         "name": "speaking-to-be-understood",
         "title": "Speaking to be understood",
-        "link": "content/4/speaking-to-be-understood",
+        "link": "content/3/speaking-to-be-understood",
         "source": "andela"
       },
       {
         "name": "seeks-feedback",
         "title": "Seeks Feedback",
-        "link": "content/4/seeks-feedback",
+        "link": "content/3/seeks-feedback",
         "source": "andela"
       },
       {
         "name": "writing-professionally",
         "title": "Writing Professionally ",
-        "link": "content/4/writing-professionally",
-        "source": "andela"
+        "link": "content/3/writing-professionally"
+      },
+      {
+        "name": "project-management",
+        "title": "Project Management Tools",
+        "link": "https://www.pivotaltracker.com/help/articles/quick_start/"
+      },
+      {
+        "name": "business-etiquette",
+        "title": "Business Etiquette",
+        "link": "content/3/business-etiquette"
+      },
+      {
+        "name": "ethics",
+        "title": "Ethics",
+        "link": "content/3/ethics"
       }
      ]
   },
@@ -149,21 +165,21 @@
         "coverage": "1",
         "name": "oop",
         "title": "What is Object Oriented Programming",
-        "link": "content/5/oop"
+        "link": "content/4/oop"
       },
       {
         "lang": "py",
         "coverage": "1, 2",
         "name": "py-oop--py",
         "title": "Object Oriented Programming in Python",
-        "link": "content/5/py-oop--py"
+        "link": "content/4/py-oop--py"
       },
       {
         "lang": "js",
         "coverage": "1, 2",
         "name": "js-oop--js",
         "title": "Introducing JavaScript Objects",
-        "link": "content/5/js-oop--js"
+        "link": "content/4/js-oop--js"
       }
     ]
   },
@@ -251,18 +267,7 @@
       "Different types of ethical issues "
     ],
     "content":[
-      {
-        "name": "business-etiquette",
-        "title": "Business Etiquette",
-        "link": "content/9/business-etiquette",
-        "source": "andela"
-      },
-      {
-        "name": "ethics",
-        "title": "Ethics",
-        "link": "content/9/ethics",
-        "source": "andela"
-      }
+
      ]
   },
   {
