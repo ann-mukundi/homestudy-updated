@@ -268,12 +268,16 @@
   {
     "name": "Databases",
     "overview": "",
-    "objectives": [""],
+    "objectives": [
+      "Types of databases that exists (SQL and NoSQL)",
+      "The different types of databases",
+      "How to create a simple SQL database",
+      "Simple SQL queries"
+    ],
     "content":[{
-      "name": "",
-      "title": "",
-      "link":
-        ""
+      "name": "databases",
+      "title": "Introduction to databases",
+      "link": "content/7/databases"
     }]
   },
   {
