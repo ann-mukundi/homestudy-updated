@@ -292,50 +292,49 @@
     ],
     "content": [
       {
-        "coverage": "1",
-        "name": "protocol-http",
-        "title": "HTTP: The Protocol Every Web Developer Must Know",
-        "link":
-          "https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177"
-      },
+      "name": "web-programming",
+      "title": "Introduction to web programming",
+      "link": "content/8/web-programming"
+    },
       {
-        "coverage": "2",
-        "name": "htmlfive-tutorial",
-        "title": "HTML5 Tutorial",
-        "link": "https://www.w3schools.com/html/"
-      },
+      "name": "web-services",
+      "title": "Http and web services",
+      "link": "content/8/web-services"
+    },
       {
-        "coverage": "2",
-        "name": "css-tutorial",
-        "title": "CSS Tutorial",
-        "link": "https://www.w3schools.com/css/default.asp"
-      },
+      "name": "html-css-practice",
+      "title": "HTML and CSS practical",
+      "link": "https://www.codecademy.com/learn/learn-html"
+    },
       {
-        "coverage": "2",
-        "name": "html-css-course",
-        "title": "HTML / CSS Tutorial",
-        "link": "https://www.codecademy.com/learn/web"
-      },
+        "lang":"js",
+      "name": "js--practice--js",
+      "title": "Javascript practical",
+      "link": "https://www.codecademy.com/learn/learn-javascript"
+    },
       {
-        "coverage": "3",
-        "name": "the-modern-javascript-tutorial--js",
-        "title": "The Modern JavaScript Tutorial",
-        "link": "https://javascript.info/"
-      },
+      "lang":"py",
+      "name": "py--frameworks--py",
+      "title": "Basics of MVC architecture",
+      "link": "content/8/py--frameworks--py"
+    },
       {
-        "lang": "js",
-        "coverage": "3",
-        "name": "codecademy-js-course--js",
-        "title": "Codecademy JavaScript Course",
-        "link": "https://www.codecademy.com/learn/learn-javascript"
-      },
+      "lang":"py",
+      "name": "py--flask--py",
+      "title": "Getting started with flask",
+      "link": "content/8/py--flask--py"
+    },
       {
-        "coverage": "4",
-        "name": "mvc-explained-with-legos",
-        "title": "Model-View-Controller (MVC) Explained",
-        "link":
-          "https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/"
-      }
+      "name": "intro-to-react",
+      "title": "Introduction to REACT",
+      "link": "content/8/intro-to-react"
+    },
+       {
+      "lang":"js",
+      "name": "js--node--js",
+      "title": "Introduction to NodeJS",
+      "link": "content/8/js--node--js"
+    }
     ]
   },
   {
