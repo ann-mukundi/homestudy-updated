@@ -11,6 +11,12 @@ Aspiring Andelans know what SQL is, the different types of databases, examples o
 
 ----------
 
+Practice
+
+Using [http://sqlfiddle.com/](SQL Fiddle) create a simple database for an application that allows you to create a list of activities you need to undertake by the end of the day and mark them as done or not.
+
+----------
+
 ### ** Demonstrating an understanding of data bases **
 A. **  When faced with a data modeling problem **
 - I create the required table structures diagrammatically
