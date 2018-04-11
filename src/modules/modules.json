@@ -345,9 +345,9 @@
       "Should be able to write simple ES6 applications.",
       "Should be familiar with the new JS features introduced in ES6."],
     "content":[{
-      "name": "intro-to-es6",
+      "name": "intro-to-js",
       "title": "Introduction to ES6",
-      "link":"content/9/intro-to-es6"
+      "link":"content/9/intro-to-js"
     },
       {
       "name": "first-look-at-es6",
