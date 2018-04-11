@@ -11,12 +11,16 @@ Aspiring Andelans with this skill are fluent in the newest syntax of ES6 impleme
 ### ** Demonstrating Skill **
 A. **  When I am writing ES6 code,  **
 -  I follow ES6 best practices and conventions.
+
 B. **  When I am programming in ES6,  **
 -  I use the latest syntax available to ensure my code remains relevant and is as clean as possible.
+
 C. **  When I need to assign enumerable properties of one or more source objects onto a destination object,  **
 -  I use object property assignment.
+
 D. **  When I need to find an element in an array in ES6,  **
 -  I use the built-in element finding function.
+
 E. **  When I want to validate data that is being passed to an object,  **
 -  I use a proxy.
 
