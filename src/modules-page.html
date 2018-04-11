@@ -105,7 +105,7 @@
                     <ul id="studyres">
                       <template is="dom-repeat" items="{{contentLinks}}" as="res">
                           <li>                                                                      
-                            <a lang$="[[res.lang]]" name="resource" href="[[rootPath]][[res.link]]"  data-source$=[[res.source]]   data-module$="{{moduleIndex}}" data-file$="[[res.title]]" on-click="_resourceLinkClicked">[[res.title]]</a>
+                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]"  data-source$=[[res.source]]   data-module$="{{moduleIndex}}" data-file$="[[res.title]]" on-click="_resourceLinkClicked">[[res.title]]</a>
                           </li>
                       </template>
                     </ul>
