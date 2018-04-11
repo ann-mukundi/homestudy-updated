@@ -8,5 +8,6 @@ Aspiring Andelans can use Flask as a Python framework for creating web applicati
 | *  The syntax for creating model fields | [Building a CRUD application with Flask and SQLAlchemy](https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2)|
 | *  Common model field types and their parameters| [SQLAlchemy for python developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)|
 | *  Methods used for making HTTP requests to our test client ||
+| *  Flask practical | [Flask practical](http://bit.ly/an-flask) |
 
 ----------

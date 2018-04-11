@@ -10,6 +10,7 @@ Aspiring Andelan is comfortable creating a basic program in React. They can expl
 | * Difference between state and props in React|[https://goo.gl/n79dwQ](https://goo.gl/n79dwQ)|
 | * How to make a component reusable| |
 | * How React works with routes and services to make requests from an API|  |
+| * REACT practical | [REACT practical](http://bit.ly/an-react) |
 ----------
 
 ### ** Demonstrating Skill **

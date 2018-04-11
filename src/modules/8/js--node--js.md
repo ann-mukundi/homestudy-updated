@@ -11,7 +11,7 @@ Aspiring Andelans can create a basic application using the Node.js framework. Th
 | * How and when to use callbacks and promises in Node.js|  |
 | * How and when to use event emitters in Node.js|  |
 | * How to use closures for events and callbacks|  |
-
+| * NODEJS practical | [NODEJS practical](http://bit.ly/an-nodejs) |
 
 ----------
 ### ** Demonstrating Nodejs Skills **
