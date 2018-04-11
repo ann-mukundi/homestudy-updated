@@ -339,7 +339,7 @@
   },
   {
     "name": "Introduction to ES6",
-    "overview": "This module introduces the fundamental concepts and new features in ES6",
+    "overview": "This module introduces the fundamental concepts and new features in ES6(EcmaScript2015).",
     "objectives": ["Have a basic understanding of the structure of ES6.",
       "Should be able to adhere to ES6 syntax conventions.",
       "Should be able to write simple ES6 applications.",
