@@ -7,6 +7,7 @@ Aspiring Andelans can design a simple interactive web page. They understand and 
 | * Use of CSS|[Introduction to CSS](https://www.w3schools.com/css/default.asp)|
 | * Web Services|[Introduction to web services](http://www.springboottutorial.com/introduction-to-web-services-with-soap-and-rest)|
 | * Use JavaScript to create interactive web pages |[Intro to javascript](https://javascript.info/)|
+| * HTML and CSS practical | [HTML and CSS practical](http://bit.ly/an-html-cssl) |
 | * HTML and CSS practical | [HTML and CSS practical](https://www.codecademy.com/learn/learn-html) |
 | * JavaScript Practical| [JavaScript Practical](https://www.codecademy.com/learn/learn-javascript)|
 

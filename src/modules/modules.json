@@ -307,12 +307,6 @@
       "link": "https://www.codecademy.com/learn/learn-html"
     },
       {
-        "lang":"js",
-      "name": "js--practice--js",
-      "title": "Javascript practical",
-      "link": "https://www.codecademy.com/learn/learn-javascript"
-    },
-      {
       "lang":"py",
       "name": "py--frameworks--py",
       "title": "Basics of MVC architecture",

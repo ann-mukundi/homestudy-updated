@@ -157,7 +157,7 @@
       }
     </style>    
 
-    <app-location route="{{route}}"  ></app-location>
+    <app-location route="{{route}}" ></app-location>
     <app-route
             route="{{route}}"
             pattern="[[rootPattern]]:page"
@@ -173,9 +173,9 @@
         <app-toolbar>Navigation</app-toolbar>
         <iron-ajax url="src/modules/modules.json" last-response="{{ahsContent}}" auto=""></iron-ajax>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="home" href="home">Welcome</a>
+          <a name="home" href="[[rootPath]]home">Welcome</a>
           <iron-list items="[[ahsContent]]" as="item">
-            <template><a name="modules" href="modules/[[index]]">[[item.name]]</a></template>
+            <template><a name="modules" href="[[rootPath]]modules/[[index]]">[[item.name]]</a></template>
           </iron-list>
         </iron-selector>
       </app-drawer>
@@ -285,6 +285,10 @@
 
         let url = new URL(this.rootPath);
         this.rootPattern = (new URL(this.rootPath)).pathname;
+
+        console.log("rootPath: " + this.rootPath)
+        console.log("rootPath 2: " + url)
+        console.log("rootPattern: " + this.rootPattern)
       }
 
       connectedCallback() {
