@@ -3,7 +3,7 @@ Aspiring Andelans with this skill are fluent in the newest syntax of ES6 impleme
 
 | What do I need to know?   |      Resources      |
 |:-------------|:------------------|
-| * Introduction to ES6| [ES6: An Introduction](https://learn.co/lessons/introduction-to-es6) |
+| * Introduction to ES6| [ES6: An Introduction](https://learn.co/lessons/introduction-to-es6 "title" target="_blank") |
 | * Anatomy of JS Application |[The Anatomy of A Modern JavaScript Application](https://www.sitepoint.com/anatomy-of-a-modern-javascript-application/) |
 
 ----------

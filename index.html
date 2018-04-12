@@ -38,13 +38,13 @@
       const baseUrl = document.querySelector('base').href;
 
       // Load and register pre-caching Service Worker
-      if ('serviceWorker' in navigator) {
+      /* if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           if('https:' === window.location.protocol){
             navigator.serviceWorker.register(baseUrl + 'service-worker.js');
           }
         });
-      }
+      }*/
     </script>
     <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 

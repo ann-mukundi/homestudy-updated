@@ -48,6 +48,7 @@
         display: none;
         visibility: hidden;
       }
+
     </style>
     <style include="md-styles"></style>
 
@@ -105,7 +106,9 @@
                       <template is="dom-repeat" items="{{contentLinks}}" as="res">
                           <li>
                             <!-- <a lang$="[[res.lang]]" name="resource" href="modules/[[pathIndex]]/[[res.name]]">[[res.title]]</a> -->
-                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]" on-click="_resourceLinkClicked" target="_blank">[[res.title]]</a>
+                            <a lang$="[[res.lang]]" name="resource" href="[[res.link]]  "on-click="_resourceLinkClicked" target="_blank">
+                              [[res.title]]
+                            </a>
                           </li>
                       </template>
                     </ul>
@@ -122,7 +125,8 @@
           <div class="mdl-cell mdl-cell--12-col">
             <h1 class="title-root">
               <paper-menu-button>
-                <paper-fab slot="dropdown-trigger" label="{{moduleIndex}}" alt="menu"></paper-fab>
+                <paper-fab slot="dropdown-trigger" label="{{moduleIndex}}" alt="menu">
+                </paper-fab>
                 <paper-listbox slot="dropdown-content">
                   <template is="dom-repeat" items="{{contentLinks}}" as="res">
                     <paper-item>
@@ -283,8 +287,10 @@
 
       }
 
-      _renderdone() {
-        
+      _renderDone() {
+        console.log('renderDone', this.moduleIndex);
+        let outLinks = document.querySelectorAll('a [href=http*]');
+        console.log(outLinks);
       }
 
     }
